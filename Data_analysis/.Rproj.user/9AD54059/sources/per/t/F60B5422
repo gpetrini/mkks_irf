@@ -1,0 +1,25 @@
+{
+    "id": "F60B5422",
+    "path": "~/LSD/Work/model_jeec/Data_analysis/model_aggregates.R",
+    "project_path": "model_aggregates.R",
+    "type": "r_source",
+    "hash": "2856457438",
+    "contents": "",
+    "dirty": false,
+    "created": 1610361235506.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "cursorPosition": "987,0",
+        "scrollLine": "713",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1631320338,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1631320338261,
+    "read_only": false,
+    "read_only_alternatives": []
+}

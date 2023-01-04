@@ -1,0 +1,41 @@
+# teste2 <- mcData %>% 
+#   select( exp_n, mc_n, t, statErgo.vars ) %>%
+#   group_by( exp_n, mc_n ) %>%
+#   summarise( across( statErgo.vars, ~try(suppressWarnings(urca::ur.df( .x, type = 'drift', lags = 10, selectlags = 'AIC' )@testreg$coefficients[,4][2]), silent = TRUE), .names = "ADF_{.col}" ),
+#              across( statErgo.vars, ~try(suppressWarnings(urca::ur.pp( .x, lags = 'short', model = 'constant')@testreg$coefficients[,4][2]), silent = TRUE), .names = "PP_{.col}" ),
+#              across( statErgo.vars, ~try(suppressWarnings(kpss_test( .x ) ), silent = TRUE), .names = "KPSS_{.col}" ) ) %>%
+#   group_by( exp_n ) %>% 
+#   summarise( across( contains( 'ADF' ), ~sum(.x <= 1 - CI ) / n( ) ),
+#              across( contains( 'PP' ), ~sum(.x <= 1 - CI ) / n( ) ),
+#              across( contains( 'KPSS' ), ~sum(.x <= 1 - CI ) / n( ) ) ) %>%
+#   pivot_longer( cols = -exp_n ) %>%
+#   separate( name, c( "Test", "Variable" ), sep = '_' ) %>% 
+#   pivot_wider( names_from = 'Test' )
+# 
+# 
+# 
+# a<-urca::ur.df( teste$Lev, type = 'drift', lags = 20, selectlags = 'AIC' )@testreg$coefficients[,4][2]
+# b<-urca::ur.pp( teste$Lev, lags = 'short', model = 'constant')@testreg$coefficients[,4][2]
+# c<-urca::ur.kpss( teste$Lev[1:520], type = 'mu' )
+# c@cval[1]
+# c@teststat
+# 
+# kpss_test <- function( var ){
+#   a <- urca::ur.kpss( var, type = 'mu' )
+#   test.stat <- a@teststat
+#   proxy_pvalue <- ifelse( test.stat < a@cval[1], 0.5, 
+#                           ifelse( test.stat < a@cval[2], 0.05, 0.01 ) )
+#   return( proxy_pvalue )
+# }
+# 
+# kpss_test( teste$Lev[1:520] )
+# 
+#   c@cval
+# 
+# attr(a, 'testreg')
+# a
+# ?urca::ur.df
+# summary(a@)
+# 
+# a <- tseries::adf.test(teste$Lev, alternative = 'e')
+# a

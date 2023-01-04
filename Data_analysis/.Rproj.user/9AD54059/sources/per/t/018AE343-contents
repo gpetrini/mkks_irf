@@ -1,0 +1,27 @@
+rho <- 0.99
+med <- 0
+var <- 1
+y0  <- 100
+nPer<- 300
+rept<- 100
+
+
+y <- matrix( NA, nrow = nPer, ncol = rept )
+y[1, ] <- y0
+colnames( y ) <- paste0( 'y_', 1 : rept )
+
+for( i in 2 : nPer ){
+  for( j in 1 : rept ){
+    y[ i, j ] <- rho * y[ i-1, j ] + rnorm( 1, mean = med, sd = sqrt( var ) )
+  }
+}
+plot( y[, 'y_1'], type = 'l' ) 
+plot( y[, 'y_2'], type = 'l' ) 
+plot( y[, 'y_3'], type = 'l' ) 
+plot( y[, 'y_4'], type = 'l' ) 
+plot( y[, 'y_5'], type = 'l' ) 
+plot( y[, 'y_6'], type = 'l' ) 
+plot( y[, 'y_7'], type = 'l' ) 
+plot( y[, 'y_8'], type = 'l' ) 
+plot( y[, 'y_9'], type = 'l' ) 
+plot( y[, 'y_10'], type = 'l' ) 

@@ -1,0 +1,72 @@
+Minsky-Kalecki-Keynes-Schumpeter Model (MKKS) (ver. 1.0)
+
+Paper: To what extent does aggregate leverage determine financial fragility? New insights from an agent-based stock-flow consistent model.
+Authors: Ítalo Pedrosa (IE/UFRJ) and Dany Lang (Université Paris 13).
+This version: May 2021.
+
+*********************************************************************************************************************************************
+
+Coded by Ítalo Pedrosa.
+
+*********************************************************************************************************************************************
+
+EXTERNAL REQUIREMENTS TO RUN (necessary for internally getting the initial conditions according to the methodology described in the paper).
+- R must be installed and functioning normally.
+- The package "sfcr" must be installed in R, including dependencies.
+- The file "get_init.R" must be held in the folder named init_cond.
+- If you are runnning LSD under Windows OS, you must add R folder for the Rscript command to be recognised in cmd. 
+
+MODEL DESCRIPTION AND FEATURES:
+
+The model integrates Keynesian-Kaleckian, Minskian, and evolutionary theories.
+
+The Keynesian-Kaleckian nature of the model stems from its demand-led closure.
+
+The model embeds the evolutionary theory in the technological and behavioural structure of the non-financial firms' sector.
+
+The model embeds the Minskian theory with the investment-cash-flow-debt architecture initially present in Minsky's writing.
+
+We assume a closed economy composed of F firms; and household, banking, and government sectors. Firms (denoted by the subscript f) produce a single good, which in our framework can be interpreted as being of heterogeneous varieties. The household sector (denoted by the subscript H) supplies labour to the firms, consumes goods, and accumulates wealth – held both as deposits in bank accounts and as government bills. We assume that households own the banking system and firms, therefore receiving dividends (but there is no secondary market for firms’ and banks’ stocks) from them. The banking sector (denoted by the subscript B) provides firms with loans, takes deposits from both households and firms, and buys government bills. 
+
+The government levies taxes on households’ income and firms’ profits and consume goods from firms to provide public services. The issuance (withdraws) of bills finances the government deficit (surplus), which generates future payments of interest to the bondholders. As our focus is on the firms’ sector, to keep our model as simple as possible, the household and banking sectors are modelled as aggregates (see Di Guilmi and Carvalho, 2017; Reissl, 2020, for similar hybrid AB-SFC approaches). We further assume an unlimited supply of labour, which implies persistent unemployment. Finally, as in the majority of AB-SFC models, the inclusion of a government sector stabilises an otherwise unstable model.
+
+TIMELINE OF EVENTS:
+
+1. Production planning: firms decide the desired level of production and R&D. Demand for labour is defined according to the firms’ current labour productivity;
+2. Investment: firms decide whether to replace older capital machines and/or to expand capacity;
+3. Firms and workers agree on a nominal wage;
+4. Pricing: firms revise their mark-ups and set prices;
+5. Loan demand: firms set the demand for loans;
+6. Loan supply: the banking sector evaluates each firm’s loan project, makes a decision on the value granted, and credit each firm’s checking account accordingly;
+7. Revision of projects: firms revise the number of workers and investment plans considering the potential credit rationing;
+8. Production: firms produce and pay wages to workers;
+9. R&D takes place. Firms that gain access to a more productive technology may use that technology in the next period;
+10. Market: an imperfect market for goods opens. Market shares evolve according to firms’ price competitiveness;
+11. Firms incorporate the new machines to their capacity and they become available to the next period;
+12. Debt servicing: interest and amortisation are paid by firms to banks. Firms with insufficient funds go bankrupt;
+13. Firms and the banking sector pay taxes and dividends;
+14. Interest on bills: the government pays interest to the household sector;
+15. Households pay taxes on their income;
+16. Entry and exit of firms take place.
+
+*********************************************************************************************************************************************
+
+MODEL PARAMETERS:
+
+... (to be described).
+
+*********************************************************************************************************************************************
+
+MODEL CONFIGURATIONS:
+
+The configurations replicate the paper's results.
+
+Sim1: base folder. Designed to offer a single run of the model for testing.
+S1:   in ./Data_analysis/Base_scen. First configuration reported in the paper (no credit rationing, equal interest rate across firms)
+S2:   in ./Data_analysis/Base_scen. First configuration reported in the paper (credit rationing, but equal interest rate across firms)
+S3:   in ./Data_analysis/Base_scen. First configuration reported in the paper (credit rationing and firm-specific interest rate)
+Sobol analysis: ./Data_analysis/Sobol. All files are generated from Sobol.lsd and Sobol.sa.
+
+Data analysis: using model_aggregates.R, model_firms.R, and model-kriging-sobol-SA.R
+
+

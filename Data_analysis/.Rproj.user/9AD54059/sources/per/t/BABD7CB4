@@ -1,0 +1,23 @@
+{
+    "id": "BABD7CB4",
+    "path": "~/LSD/Work/model_jeec/Data_analysis/Sobol/init_cond/get_init.R",
+    "project_path": "Sobol/init_cond/get_init.R",
+    "type": "r_source",
+    "hash": "2695989773",
+    "contents": "",
+    "dirty": false,
+    "created": 1610325498436.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1610244783,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1610244783,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,1204 @@
+
+Processing configuration file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1.lsd ...
+
+Simulation 1 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 1 of 100 finished at t = 520 (35.99 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_1.res.gz... Done
+
+Simulation 2 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 2 of 100 finished at t = 520 (36.00 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_2.res.gz... Done
+
+Simulation 3 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 3 of 100 finished at t = 520 (37.31 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_3.res.gz... Done
+
+Simulation 4 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 4 of 100 finished at t = 520 (37.77 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_4.res.gz... Done
+
+Simulation 5 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 5 of 100 finished at t = 520 (37.60 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_5.res.gz... Done
+
+Simulation 6 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 6 of 100 finished at t = 520 (37.58 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_6.res.gz... Done
+
+Simulation 7 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 7 of 100 finished at t = 520 (37.59 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_7.res.gz... Done
+
+Simulation 8 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 8 of 100 finished at t = 520 (38.46 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_8.res.gz... Done
+
+Simulation 9 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 9 of 100 finished at t = 520 (39.50 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_9.res.gz... Done
+
+Simulation 10 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 10 of 100 finished at t = 520 (39.43 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_10.res.gz... Done
+
+Simulation 11 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 11 of 100 finished at t = 520 (39.58 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_11.res.gz... Done
+
+Simulation 12 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 12 of 100 finished at t = 520 (39.95 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_12.res.gz... Done
+
+Simulation 13 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 13 of 100 finished at t = 520 (40.83 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_13.res.gz... Done
+
+Simulation 14 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 14 of 100 finished at t = 520 (40.95 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_14.res.gz... Done
+
+Simulation 15 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 15 of 100 finished at t = 520 (41.81 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_15.res.gz... Done
+
+Simulation 16 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 16 of 100 finished at t = 520 (41.65 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_16.res.gz... Done
+
+Simulation 17 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 17 of 100 finished at t = 520 (40.88 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_17.res.gz... Done
+
+Simulation 18 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 18 of 100 finished at t = 520 (41.50 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_18.res.gz... Done
+
+Simulation 19 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 19 of 100 finished at t = 520 (42.62 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_19.res.gz... Done
+
+Simulation 20 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 20 of 100 finished at t = 520 (41.55 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_20.res.gz... Done
+
+Simulation 21 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 21 of 100 finished at t = 520 (42.24 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_21.res.gz... Done
+
+Simulation 22 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 22 of 100 finished at t = 520 (43.42 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_22.res.gz... Done
+
+Simulation 23 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 23 of 100 finished at t = 520 (42.36 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_23.res.gz... Done
+
+Simulation 24 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 24 of 100 finished at t = 520 (43.34 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_24.res.gz... Done
+
+Simulation 25 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 25 of 100 finished at t = 520 (42.04 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_25.res.gz... Done
+
+Simulation 26 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 26 of 100 finished at t = 520 (43.62 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_26.res.gz... Done
+
+Simulation 27 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 27 of 100 finished at t = 520 (43.94 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_27.res.gz... Done
+
+Simulation 28 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 28 of 100 finished at t = 520 (43.63 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_28.res.gz... Done
+
+Simulation 29 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 29 of 100 finished at t = 520 (43.92 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_29.res.gz... Done
+
+Simulation 30 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 30 of 100 finished at t = 520 (43.70 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_30.res.gz... Done
+
+Simulation 31 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 31 of 100 finished at t = 520 (43.38 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_31.res.gz... Done
+
+Simulation 32 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 32 of 100 finished at t = 520 (44.54 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_32.res.gz... Done
+
+Simulation 33 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 33 of 100 finished at t = 520 (44.29 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_33.res.gz... Done
+
+Simulation 34 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 34 of 100 finished at t = 520 (45.36 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_34.res.gz... Done
+
+Simulation 35 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 35 of 100 finished at t = 520 (45.41 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_35.res.gz... Done
+
+Simulation 36 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 36 of 100 finished at t = 520 (49.53 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_36.res.gz... Done
+
+Simulation 37 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 37 of 100 finished at t = 520 (47.17 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_37.res.gz... Done
+
+Simulation 38 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 38 of 100 finished at t = 520 (46.14 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_38.res.gz... Done
+
+Simulation 39 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 39 of 100 finished at t = 520 (46.46 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_39.res.gz... Done
+
+Simulation 40 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 40 of 100 finished at t = 520 (46.33 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_40.res.gz... Done
+
+Simulation 41 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 41 of 100 finished at t = 520 (47.10 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_41.res.gz... Done
+
+Simulation 42 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 42 of 100 finished at t = 520 (47.57 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_42.res.gz... Done
+
+Simulation 43 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 43 of 100 finished at t = 520 (46.44 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_43.res.gz... Done
+
+Simulation 44 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 44 of 100 finished at t = 520 (50.04 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_44.res.gz... Done
+
+Simulation 45 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 45 of 100 finished at t = 520 (49.67 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_45.res.gz... Done
+
+Simulation 46 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 46 of 100 finished at t = 520 (53.08 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_46.res.gz... Done
+
+Simulation 47 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 47 of 100 finished at t = 520 (53.73 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_47.res.gz... Done
+
+Simulation 48 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 48 of 100 finished at t = 520 (56.22 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_48.res.gz... Done
+
+Simulation 49 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 49 of 100 finished at t = 520 (63.51 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_49.res.gz... Done
+
+Simulation 50 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 50 of 100 finished at t = 520 (52.11 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_50.res.gz... Done
+
+Simulation 51 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 51 of 100 finished at t = 520 (56.91 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_51.res.gz... Done
+
+Simulation 52 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 52 of 100 finished at t = 520 (50.81 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_52.res.gz... Done
+
+Simulation 53 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 53 of 100 finished at t = 520 (63.10 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_53.res.gz... Done
+
+Simulation 54 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 54 of 100 finished at t = 520 (58.45 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_54.res.gz... Done
+
+Simulation 55 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 55 of 100 finished at t = 520 (57.96 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_55.res.gz... Done
+
+Simulation 56 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 56 of 100 finished at t = 520 (53.81 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_56.res.gz... Done
+
+Simulation 57 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 57 of 100 finished at t = 520 (55.60 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_57.res.gz... Done
+
+Simulation 58 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 58 of 100 finished at t = 520 (61.04 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_58.res.gz... Done
+
+Simulation 59 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 59 of 100 finished at t = 520 (64.59 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_59.res.gz... Done
+
+Simulation 60 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 60 of 100 finished at t = 520 (57.03 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_60.res.gz... Done
+
+Simulation 61 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 61 of 100 finished at t = 520 (63.28 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_61.res.gz... Done
+
+Simulation 62 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 62 of 100 finished at t = 520 (62.82 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_62.res.gz... Done
+
+Simulation 63 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 63 of 100 finished at t = 520 (61.74 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_63.res.gz... Done
+
+Simulation 64 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 64 of 100 finished at t = 520 (51.35 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_64.res.gz... Done
+
+Simulation 65 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 65 of 100 finished at t = 520 (58.04 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_65.res.gz... Done
+
+Simulation 66 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 66 of 100 finished at t = 520 (61.00 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_66.res.gz... Done
+
+Simulation 67 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 67 of 100 finished at t = 520 (51.43 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_67.res.gz... Done
+
+Simulation 68 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 68 of 100 finished at t = 520 (52.00 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_68.res.gz... Done
+
+Simulation 69 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 69 of 100 finished at t = 520 (51.67 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_69.res.gz... Done
+
+Simulation 70 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 70 of 100 finished at t = 520 (52.95 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_70.res.gz... Done
+
+Simulation 71 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 71 of 100 finished at t = 520 (52.31 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_71.res.gz... Done
+
+Simulation 72 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 72 of 100 finished at t = 520 (59.18 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_72.res.gz... Done
+
+Simulation 73 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 73 of 100 finished at t = 520 (58.57 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_73.res.gz... Done
+
+Simulation 74 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 74 of 100 finished at t = 520 (55.41 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_74.res.gz... Done
+
+Simulation 75 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 75 of 100 finished at t = 520 (54.00 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_75.res.gz... Done
+
+Simulation 76 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 76 of 100 finished at t = 520 (60.31 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_76.res.gz... Done
+
+Simulation 77 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 77 of 100 finished at t = 520 (66.15 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_77.res.gz... Done
+
+Simulation 78 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 78 of 100 finished at t = 520 (52.99 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_78.res.gz... Done
+
+Simulation 79 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 79 of 100 finished at t = 520 (54.23 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_79.res.gz... Done
+
+Simulation 80 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 80 of 100 finished at t = 520 (53.62 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_80.res.gz... Done
+
+Simulation 81 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 81 of 100 finished at t = 520 (57.31 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_81.res.gz... Done
+
+Simulation 82 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 82 of 100 finished at t = 520 (59.03 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_82.res.gz... Done
+
+Simulation 83 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 83 of 100 finished at t = 520 (57.21 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_83.res.gz... Done
+
+Simulation 84 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 84 of 100 finished at t = 520 (56.57 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_84.res.gz... Done
+
+Simulation 85 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 85 of 100 finished at t = 520 (56.24 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_85.res.gz... Done
+
+Simulation 86 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 86 of 100 finished at t = 520 (58.47 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_86.res.gz... Done
+
+Simulation 87 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 87 of 100 finished at t = 520 (59.87 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_87.res.gz... Done
+
+Simulation 88 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 88 of 100 finished at t = 520 (56.19 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_88.res.gz... Done
+
+Simulation 89 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 89 of 100 finished at t = 520 (55.42 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_89.res.gz... Done
+
+Simulation 90 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 90 of 100 finished at t = 520 (52.95 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_90.res.gz... Done
+
+Simulation 91 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 91 of 100 finished at t = 520 (58.30 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_91.res.gz... Done
+
+Simulation 92 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 92 of 100 finished at t = 520 (54.18 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_92.res.gz... Done
+
+Simulation 93 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 93 of 100 finished at t = 520 (53.98 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_93.res.gz... Done
+
+Simulation 94 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 94 of 100 finished at t = 520 (53.82 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_94.res.gz... Done
+
+Simulation 95 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 95 of 100 finished at t = 520 (53.14 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_95.res.gz... Done
+
+Simulation 96 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 96 of 100 finished at t = 520 (54.00 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_96.res.gz... Done
+
+Simulation 97 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 97 of 100 finished at t = 520 (54.09 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_97.res.gz... Done
+
+Simulation 98 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 98 of 100 finished at t = 520 (52.66 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_98.res.gz... Done
+
+Simulation 99 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 99 of 100 finished at t = 520 (56.13 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_99.res.gz... Done
+
+Simulation 100 of 100 running...
+Command sent to system was: Rscript /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/get_init.R S1 /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/init_cond/# A tibble: 1 x 19
+     gss    uT     A      S    INV     L      P     w     Df  etaf   nwB      B
+   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl>  <dbl>
+1 0.0302  0.80  6.12 5.33e5 1.07e5 30000 0.0697 0.294 28206. 0.286 3855. 18652.
+# … with 7 more variables: Bh <dbl>, Bb <dbl>, Dh <dbl>, spread <dbl>,
+#   tau1 <dbl>, V <dbl>, alpha2 <dbl>
+
+R code successfully run...
+Simulation 100 of 100 finished at t = 520 (53.53 sec.)
+Saving results in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_100.res.gz... Done
+
+Saving totals in file /home/italo/LSD/Work/model_jeec/Data_analysis/Base_scen/S1_1_100.tot.gz... Done
