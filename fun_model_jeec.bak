@@ -59,9 +59,6 @@ double ntile_vector( vector<double> a, float ntile )
 		return( result );
 }
 
-
-// do not add Equations in this area
-
 MODELBEGIN
 
 // The equation files below contains all LSD equations, organized by the

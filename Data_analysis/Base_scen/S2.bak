@@ -468,7 +468,7 @@ DATA
 Object: Root C	1
 Var: Init 0 n + n n
 Param: flagProductivity 0 n + n n	0
-Param: flagRationing 0 n + n n	0
+Param: flagRationing 0 n + n n	1
 Param: flagFloatingInterestRate 0 n + n n	0
 Param: flagVariableBankInterestRate 0 n + n n	0
 Param: Assets0 0 n + n n	100000
