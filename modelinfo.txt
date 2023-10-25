@@ -7,10 +7,10 @@ Model-JEEC-lsd8
 1920x976+0+35
 942x618+276+151
 #
-645x474+656+282
+645x474+656+284
 #
-Data_analysis/Base_scen/S2.lsd
-Firms
+Data_analysis/Base_scen/S1.lsd
+Countries
 1
-65
-0.46017699115044247
+153
+0.8246753246753247

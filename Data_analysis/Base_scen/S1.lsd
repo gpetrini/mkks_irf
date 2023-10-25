@@ -641,7 +641,7 @@ Var: BankruptcyRate 0 n + n n
 Var: _HHI 0 s + n n
 Var: _TD 0 n + n n
 Var: _TechHet 0 s + n n
-Var: WorkingCapitalToTotalLoanDemand 0 s + n p
+Var: WorkingCapitalToTotalLoanDemand 0 s + n n
 
 Object: Households C	1
 Var: CapitalContribution 0 n + n n

@@ -771,7 +771,7 @@ Var: Markup 1 n + n n	0.45
 Var: MinskianFirm 0 n + n n
 Var: NetProfits 0 n + n n
 Var: NewMachineUnitCost 0 n + n n
-Var: NominalCapitalStock 1 n - n n	0
+Var: NominalCapitalStock 1 n + n n	0
 Var: NominalDepreciation 0 n + n n
 Var: NominalInvestment 0 n + n n
 Var: NominalSales 1 n + n n	0
@@ -2392,6 +2392,8 @@ END_DESCRIPTION
 
 Variable_NominalCapitalStock
 
+_INIT_
+All 1 instances equal to 0
 END_DESCRIPTION
 
 Variable_NominalDepreciation

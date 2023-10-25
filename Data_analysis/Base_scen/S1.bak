@@ -771,7 +771,7 @@ Var: Markup 1 n + n n	0.45
 Var: MinskianFirm 0 n + n n
 Var: NetProfits 0 n + n n
 Var: NewMachineUnitCost 0 n + n n
-Var: NominalCapitalStock 0 n + n n
+Var: NominalCapitalStock 1 n + n n	0
 Var: NominalDepreciation 0 n + n n
 Var: NominalInvestment 0 n + n n
 Var: NominalSales 1 n + n n	0
@@ -898,7 +898,7 @@ MODELREPORT report_Sim1.html
 DESCRIPTION
 
 Object_Root
-(no description available)
+
 END_DESCRIPTION
 
 Variable_Init
@@ -907,8 +907,6 @@ It is computed only once in the beginning of the simulation.
 Must be the first variable in the list in model's setup.
 
 'Init' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Parameter_flagProductivity
@@ -919,97 +917,97 @@ All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_flagRationing
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_flagFloatingInterestRate
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_flagVariableBankInterestRate
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_Assets0
-(no description available)
+
 _INIT_
 All 1 instances equal to 100000.
 END_DESCRIPTION
 
 Parameter_gk0
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.022.
 END_DESCRIPTION
 
 Parameter_inf0
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.008.
 END_DESCRIPTION
 
 Parameter_u0
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.82.
 END_DESCRIPTION
 
 Parameter_K0
-(no description available)
+
 _INIT_
 All 1 instances equal to 1000000.
 END_DESCRIPTION
 
 Parameter_Nf0
-(no description available)
+
 _INIT_
 All 1 instances equal to 92000.
 END_DESCRIPTION
 
 Parameter_h0
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.168.
 END_DESCRIPTION
 
 Parameter_lev0
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.3.
 END_DESCRIPTION
 
 Parameter_r0
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.956.
 END_DESCRIPTION
 
 Parameter_nk0
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.068.
 END_DESCRIPTION
 
 Parameter_ibk0
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.055.
 END_DESCRIPTION
 
 Parameter_gDebtGDP0
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.5.
 END_DESCRIPTION
 
 Parameter_kFilledInit
-(no description available)
+
 _INIT_
 All 1 instances equal to 11.
 END_DESCRIPTION
@@ -1027,58 +1025,44 @@ All 1 instances equal to 1.
 END_DESCRIPTION
 
 Object_Countries
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_Agg_NominalSales
- 
 Aggregate, nominal sales
 
 'Agg_NominalSales' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_Agg_RealSales
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateAssetsFirms
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateCapacityUtilisation
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_AggregateCapitalStock
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_AggregateConsumption
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateDebtAmortisation
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateDebtFirms
- 
 Aggregate debt of all firms
 
 'AggregateDebtFirms' appears in the equation for: (never used)
@@ -1087,284 +1071,200 @@ All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_AggregateDemand
- Sum investment and consumption 
-_INIT_
-
+Sum investment and consumption
 END_DESCRIPTION
 
 Variable_AggregateDepreciation
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateDividendPayoutRatioFirms
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateDividendsBanks
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateDividendsFirms
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateFirmDeposits
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_AggregateGrowthProductivity
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_AggregateInventories
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_AggregateInvestment
- Aggregate investment 
-_INIT_
-
+Aggregate investment
 END_DESCRIPTION
 
 Variable_AggregateLeverage
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateNewLoans
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateNominalCapital
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_AggregateNominalConsumption
 Nominal consumption of households
-_INIT_
-
 END_DESCRIPTION
 
 Variable_AggregateNominalDepreciation
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateNominalInvestment
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateNonPerformingLoans
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateProduction
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateProductivity
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_AggregateProfitRate
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateProfits
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateSavingFirms
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateSupply
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AggregateWageBill
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AverageInterestPayment
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AverageMarkup
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_BottomBinaryEmploymentGrowth
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ChangeBillsBanksSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ChangeBillsHouseholdsSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ChangeDebtFirmsSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ChangeDepositsBanksSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ChangeDepositsFirmsSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ChangeDepositsHouseholdsSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ChangeLoanPortfolioBanksSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckBudgetConstraintBanksSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckBudgetConstraintFirmsSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckBudgetConstraintGovernmentSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckBudgetConstraintHouseholdsSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckCapitalStock
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckFinancialSavings
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckFirmsDebt
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckGovernmentDebt
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckInventory
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckNominalSalesDemand
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckOutputDemandSupply
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckRealSalesDemand
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CheckSupplyDemand
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_Exit
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
@@ -1375,470 +1275,326 @@ A speculative firm weights 1.
 A Ponzi firm weights 2.
 The weight of a single firm in the index is given by the overall share of assets.
 'FinancialFragilityIndex' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_FinancialSavingsBankingSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FinancialSavingsBankingSector_GDP
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FinancialSavingsFirmsSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FinancialSavingsFirmsSector_GDP
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FinancialSavingsGovermentSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FinancialSavingsGovermentSector_GDP
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FinancialSavingsHouseholdsSector
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FinancialSavingsHouseholds_GDP
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_GovernmentDebtToGDPRatio
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_GrowthNominalWage
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_GrowthRateCapitalStock
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_GrowthRateEmployment
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_GrowthRateMaxProductivity
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_HouseholdsWealthGDP
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_IncidenceHedgeFinancing
 Proportion of hedge firms. Not-weighted.
-_INIT_
-
 END_DESCRIPTION
 
 Variable_IncidencePonziFinancing
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_IncidenceSpeculativeFinancing
 Proportion of speculative firms. Not-weighted.
-_INIT_
-
 END_DESCRIPTION
 
 Variable_Inflation
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.02.
 END_DESCRIPTION
 
 Variable_InvToCapitalRatio
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_InvToGDPRatio
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_NominalGDP_Demand
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_NominalWage
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.177715.
 END_DESCRIPTION
 
 Variable_PriceLevel
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.07.
 END_DESCRIPTION
 
 Variable_ProfitDebtDistributionIndex
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_RealGDP_Demand
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_ReplacementInvToCapitalRatio
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_StochasticComponentGrowthNominalWage
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_TotalLabour
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_UpperBinaryEmploymentGrowth
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_WeightedIncidenceHedgeFinancing
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_WeightedIncidencePonziFinancing
 Proportion of Ponzi firms. Weighted by the total assets.
 'WeightedIncidencePonziFinancing' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_WeightedIncidenceSpeculativeFinancing
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__A
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__AssetsF
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__BtoY
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__C
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__DF
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__FFI
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__G
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__I
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__Inv
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__K
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__KN
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__L
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__Lev
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__LumH
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__LumL
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__Markup
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__MedA
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__MinA
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__Minskian
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__N
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__NI
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__P
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__PDIndex
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__ProfitRate
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__Profits
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__SN
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__SavbToY
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__SavfToY
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__SavgToY
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__SavhToY
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__Tax
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__UnwHedge
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__UnwPonzi
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__UnwSpec
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__VtoY
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__WeiHedge
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__WeiPonzi
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__WeiSpec
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__Y
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__YN
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__gA
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__gY
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__inf
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__pie
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__u
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
@@ -1882,7 +1638,7 @@ All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_nBanks
-(no description available)
+
 _INIT_
 All 1 instances equal to 1.
 END_DESCRIPTION
@@ -1918,8 +1674,6 @@ All 1 instances equal to 0.35.
 END_DESCRIPTION
 
 Variable_updateProbDrawBank
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
@@ -1936,99 +1690,73 @@ All 1 instances equal to 3.
 END_DESCRIPTION
 
 Variable__br
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_BankruptcyRate
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__HHI
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable__TD
- Technological dispersion
-_INIT_
-
+Technological dispersion
 END_DESCRIPTION
 
 Variable__TechHet
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_WorkingCapitalToTotalLoanDemand
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Object_Households
 Workers - or household sector
-_INIT_
-
 END_DESCRIPTION
 
 Variable_CapitalContribution
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_Consumption
- Real consumption of households 
+Real consumption of households 
 'Consumption' appears in the equation for: AggregateDemand, AggregateConsumption, NominalConsumption
-_INIT_
-All 1 instances equal to 15000.
 END_DESCRIPTION
 
 Variable_HouseholdBills
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_HouseholdDeposits
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_HouseholdDisposableIncome
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_HouseholdWealth
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_NominalConsumption
 Nominal consumption of a household.
-_INIT_
-
 END_DESCRIPTION
 
 Variable_TaxHousehold
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_TotalIncomeHousehold
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
@@ -2046,78 +1774,56 @@ END_DESCRIPTION
 
 Object_Sectors
 Non-financial firms, according to sector
-_INIT_
-
 END_DESCRIPTION
 
 Variable_AverageCompetitiveness
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AveragePriceForCompetitiveness
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AverageUnfilledDemandForCompetitiveness
-(no description available)
+
 _INIT_
 All 3 instances equal to 1.
 END_DESCRIPTION
 
 Variable_CheckMarketShare
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_Entry
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ExpectedPrice
- Expected price level 
-_INIT_
-
+Expected price level
 END_DESCRIPTION
 
 Variable_NearZeroMarketShare
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_NumberOfEntrants
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Function_RebaseMarketShare
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_RevisionSales
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_SectorCapital
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_TechnologicalFrontier
- Idenfication of the firm in the technological frontier
+Idenfication of the firm in the technological frontier
 Level: sector 
 'TechnologicalFrontier' appears in the equation for: InnovationWorkers, Imitation, InnovationWorkers, ImitationWorkers
 _INIT_
@@ -2125,14 +1831,10 @@ All 3 instances equal to 6.11571.
 END_DESCRIPTION
 
 Variable_TotalUnfilledDemand
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_UnitsOfLabour
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
@@ -2185,7 +1887,7 @@ All 1 instances equal to 0.5.
 END_DESCRIPTION
 
 Parameter_etaf
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
@@ -2209,7 +1911,7 @@ All 3 instances increasing from 1 with steps 1. The value is increased every 1 i
 END_DESCRIPTION
 
 Parameter_initialMarkup
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
@@ -2227,7 +1929,7 @@ All 1 instances equal to 20.
 END_DESCRIPTION
 
 Parameter_lambda
-(no description available)
+
 _INIT_
 All 1 instances equal to 10.
 END_DESCRIPTION
@@ -2239,19 +1941,19 @@ All 3 instances equal to 0.25.
 END_DESCRIPTION
 
 Parameter_maxInvestmentRatio
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.4.
 END_DESCRIPTION
 
 Parameter_maxReplacementInvestment
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.25.
 END_DESCRIPTION
 
 Parameter_minimumMarketShareTolerance
-(no description available)
+
 _INIT_
 All 1 instances equal to 1e-07.
 END_DESCRIPTION
@@ -2324,7 +2026,7 @@ All 1 instances equal to 0.5.
 END_DESCRIPTION
 
 Parameter_etaf1
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.5.
 END_DESCRIPTION
@@ -2336,38 +2038,28 @@ All 1 instances equal to 2.34173.
 END_DESCRIPTION
 
 Object_Firms
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ACurrent
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_ActualInvestment
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_Amortisation
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AvailableCapitalStock
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AverageInterestRate
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
@@ -2391,32 +2083,22 @@ All 3 instances equal to 1.
 END_DESCRIPTION
 
 Variable_CapacityUtilisation
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CapitalDepreciation
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CapitalShare
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CapitalVintageHousekeeping
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_Competitiveness
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
@@ -2424,8 +2106,6 @@ Variable_CreateOutstandingLoan
 Create a loan outstanding instance if the credit supply is greater than 0
 
 'CreateOutstandingLoan' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_CreditSupply
@@ -2434,54 +2114,44 @@ Updated in CreditEvaluation equation if credit rationing flag is activated.
 Equal to demand if there is no credit rationing.
 
 'CreditSupply' appears in the equation for: CreditEvaluation, FirmDeposits1, CreateOutstandingLoan, EffectiveDemandLabour
-_INIT_
-
 END_DESCRIPTION
 
 Variable_DebtServicing
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_DebtServicingToOperatingCashFlowRatio
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_DebtToSalesRatio
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_DefaultFlag
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Function_DefineCreditLimit
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_DemandLoans
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Parameter_DemandLoansForBankRiskEvaluation
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_DesiredCapacityUtilisation
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
@@ -2491,27 +2161,19 @@ Desired demand for labour. May be changed if the firm is credit rationed (when f
 Level: firm 
 
 'DesiredDemandLabour' appears in the equation for: ExpectedWageBill
-_INIT_
-
 END_DESCRIPTION
 
 Variable_DesiredProduction
- Desired Production. Depends on the expected sales and on the opening inventories. Applies to consumer good industry
+Desired Production. Depends on the expected sales and on the opening inventories. Applies to consumer good industry
 Level: firm 
 'DesiredProduction' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_DividendPayoutRatio
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Function_DrawABank
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
@@ -2520,18 +2182,14 @@ Updates the desired effective demand for labour, after the credit market interac
 Firms evaluate whether the funds are sufficient to produce the desired quantity.
 
 'EffectiveDemandLabour' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_EmbedCapacity
- Equation for including the newly acquired capital vintage into capital stock object 
-_INIT_
-
+Equation for including the newly acquired capital vintage into capital stock object
 END_DESCRIPTION
 
 Parameter_EntryTime
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
@@ -2544,31 +2202,23 @@ Case 2 (flagProductivity = 0): firms use all vintages in the same proportion
 Level: firm 
 
 'ExAnteAvgLabourProductivity' appears in the equation for: DesiredDemandLabour
-_INIT_
-
 END_DESCRIPTION
 
 Variable_ExpansionInvestment
- Actual expansion investment considers the cash available for firms, post-credit market interaction. 
+Actual expansion investment considers the cash available for firms, post-credit market interaction. 
 'ActualExpansionInvestment' appears in the equation for: ActualInvestment
-_INIT_
-
 END_DESCRIPTION
 
 Variable_ExpectedOperatingCashFlow
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ExpectedReturnOfLoanProject
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ExpectedSales
- Compute firm's expected sales. Form differs according to sector
+Compute firm's expected sales. Form differs according to sector
 Consumption good firms: use past sales as predictor. Aiming at production and investment.
 Capital goods 1 and 2: use past orders (even not fulfilled ones), aiming at investment solely.
 Status: TBD
@@ -2584,31 +2234,24 @@ It may differ from the actual wage bill if a firm is credit rationed and/or if i
 Level: firm
 
 'ExpectedWageBill' appears in the equation for: DemandLoans
-_INIT_
-
 END_DESCRIPTION
 
 Variable_FirmAssets
 Sum of financial and non-financial assets of firms.
 'FirmAssets' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_FirmDefault
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FirmDemand
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_FirmDeposits
- 
 Total deposits of a firm.
 Status: TBD.
 
@@ -2618,71 +2261,49 @@ All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_FirmDeposits_PostCreditUpdate
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FirmDeposits_PostDividendsUpdate
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FirmDeposits_PostProductionUpdate
- Equation to pay wages to households, after production takes place.
+Equation to pay wages to households, after production takes place.
 This equation deducts wage payments from firms' deposits
 Must be understood along with DepositsH1 and DepositsG1.
 'FirmDeposits_PostProductionUpdate' appears in the equation for: FirmDeposits_PostSalesUpdate
-_INIT_
-
 END_DESCRIPTION
 
 Variable_FirmDeposits_PostSalesUpdate
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FirmDeposits_PostTaxesUpdate
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FirmDividends
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FirmProductivityGrowth
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Function_FunctionReplacementInvestment
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FundsExpansionInvestment
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_FundsReplacementInvestment
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_GrossProfits
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
@@ -2690,54 +2311,39 @@ Variable_HedgeFirmFlag
 Identifies if a firm is in hedge financial status.
 That happens when the operating cash flow is greater than the investment plus the financial commitments.
 'HedgeFirmFlag' appears in the equation for: PonziFirmFlag
-_INIT_
-
 END_DESCRIPTION
 
 Variable_Imitation
- Firm imitation routine. Implements equations 6 and 7.
+Firm imitation routine. Implements equations 6 and 7.
 Level: firms (KG) 
 'Imitation' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_ImitationWorkers
 Real expenditure in imitation
-_INIT_
-
 END_DESCRIPTION
 
 Variable_Innovation
- Firm innovation routine. Implements equations 5 and 7
+Firm innovation routine. Implements equations 5 and 7
 Level: firm (KG) 
 'Innovation' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_InnovationWorkers
- Real expenditure in innovation. If the firm is in the technological frontier, 
+Real expenditure in innovation. If the firm is in the technological frontier, 
 all the R&D budget goes to innovation 
 'InnovationExpenditure' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_InterestAgreedBank
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_InterestPayment
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_Inventory
- 
 End-of-period inventory. Applies to consumer good industry
 Level: firm 
 
@@ -2750,74 +2356,62 @@ All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_InventoryRevaluation
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_Leverage
- Firm's total debt to total assets ratio 
+Firm's total debt to total assets ratio
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_MarketShare
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_Markup
- Markup evolves in time according to the dynamics of market share. Level: firm. 
+Markup evolves in time according to the dynamics of market share. Level: firm. 
 'Markup' appears in the equation for: Init, AverageMarkup, Price, Markup, Entry
 _INIT_
 All 1 instances equal to 0.45.
 END_DESCRIPTION
 
 Variable_MinskianFirm
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_NetProfits
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_NewMachineUnitCost
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_NominalCapitalStock
-(no description available)
-_INIT_
 
+_INIT_
+All 1 instances equal to 0
 END_DESCRIPTION
 
 Variable_NominalDepreciation
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_NominalInvestment
 Nominal investment.
-_INIT_
-
 END_DESCRIPTION
 
 Variable_NominalSales
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_OperatingCashFlow
-(no description available)
+
 _INIT_
 All 3 instances equal to 0.
 END_DESCRIPTION
@@ -2827,21 +2421,15 @@ Expansion investment - equation 11 of the paper
 Level: firm 
 
 'ExpansionInvestment' appears in the equation for: ActualExpansionInvestment, UnconstrainedReplacementInvestment, ShrinkCapacity, FundsExpansionInvestment
-_INIT_
-
 END_DESCRIPTION
 
 Variable_PlannedInvestment
 Desired level of investment by a firm (expansionary + replacement)
 
 'DesiredInvestment' appears in the equation for: ShrinkCapacity, DemandLoans
-_INIT_
-
 END_DESCRIPTION
 
 Variable_PlannedReplacementInvestment
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
@@ -2849,70 +2437,48 @@ Variable_PonziFirmFlag
 Identifies if a firm is in Ponzi financial status.
 That happens when the operating cash flow is less than the investment plus the financial commitments and the cash flow is still lower than the financial commitments.
 'PonziFirmFlag' appears in the equation for: FinancialFragilityIndex
-_INIT_
-
 END_DESCRIPTION
 
 Variable_Price
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ProbabilityOfDefault
-	
-
 Calculate the probability of default of a loan project.
 'ProbabilityOfDefault' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_Production
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ProductionWorkers
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_RDExpenditure
 Total real R&D Expenditure
-_INIT_
-
 END_DESCRIPTION
 
 Variable_RealCapitalStock
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_RealDepreciation
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ReplacementInvestment
-(no description available)
-_INIT_
-All 1 instances equal to 0.
+
 END_DESCRIPTION
 
 Variable_Sales
-(no description available)
+
 _INIT_
 All 3 instances equal to 100.
 END_DESCRIPTION
 
 Variable_ShrinkCapacity
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
@@ -2921,58 +2487,46 @@ Identifies if a firm is in speculative financial status.
 That happens when the operating cash flow is less than the investment plus the financial commitments, 
 but the cash flow is still greater than the financial commitments.
 'SpeculativeFirmFlag' appears in the equation for: PonziFirmFlag, FinancialFragilityIndex
-_INIT_
-
 END_DESCRIPTION
 
 Variable_TaxFirm
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_TotalDebt
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_UnconstrainedReplacementInvestment
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_UndistributedProfits
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_UnfilledDemand
- Unfilled demand (quantity). Updated when relevant (sales and remaining sales distribution) 
+Unfilled demand (quantity). Updated when relevant (sales and remaining sales distribution) 
 'UnfilledDemand' appears in the equation for: AverageUnfilledDemandForCompetitiveness, Competitiveness, Sales, FirmDemand, Entry
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_UnitCost
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.05.
 END_DESCRIPTION
 
 Variable_WageBill
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_WorkersFirm
- Total number of workers of a firm
+Total number of workers of a firm
 'WorkersFirm' appears in the equation for: TotalLabour, AvgLabourProductivity, FundsExpansionInvestment, FundsReplacementInvestment, FirmDeposits_PostProductionUpdate, ProductionWorkers
-_INIT_
-All 3 instances equal to 0.
 END_DESCRIPTION
 
 Variable_WorkersRD
@@ -2981,180 +2535,144 @@ The Number of R&D workers is a function of nominal sales (R&D expenditure), defl
 Level: firm
 
 'WorkersRD' appears in the equation for: InnovationWorkers, ImitationWorkers, DesiredDemandLabour, ProductionWorkers
-_INIT_
-All 3 instances equal to 13.
 END_DESCRIPTION
 
 Variable___A
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable___Assets
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable___CashF
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable___I
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable___K
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable___KN
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable___Lev
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable___Lf
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable___Minskian
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable___ProfitRate
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable___WeiItoK
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable___int
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Parameter_flagExit
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_idFirm
-(no description available)
+
 _INIT_
 All 3 instances increasing from 1 with steps 1 re-starting for each group of objects.
 END_DESCRIPTION
 
 Parameter_marketShareEntry
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_maximumReplacementInvestmentNominal
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_maximumReplacementInvestmentReal
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_probImitation
-(no description available)
+
 _INIT_
 All 1 instances equal to 1.
 END_DESCRIPTION
 
 Variable_WorkingCapitalLoanDemand
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Object_CapitalVintage
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AgeVintage
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_CapitalQuantity
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_PaybackReplacementVintage
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Parameter_QuantityDepreciation
-(no description available)
+
 _INIT_
 All 20 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_QuantityReplace
-(no description available)
+
 _INIT_
 All 20 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_Replace
-(no description available)
+
 _INIT_
 All 20 instances equal to 0.
 END_DESCRIPTION
 
 Variable_UnitCostVintage
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Parameter_VintagePrice
-(no description available)
+
 _INIT_
 All 20 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_VintageProductivity
-(no description available)
+
 _INIT_
 All 1 instances equal to 6.
 END_DESCRIPTION
@@ -3187,13 +2705,11 @@ All 1 instances equal to 0.
 END_DESCRIPTION
 
 Object_OutstandingLoan
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_LoanOutstanding
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
@@ -3205,19 +2721,19 @@ All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_AmortisationSchedule
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_PeriodsRemaining
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Parameter_InterestSchedule
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
@@ -3230,127 +2746,95 @@ END_DESCRIPTION
 
 Object_Banks
 Banking sector/banks
-_INIT_
-
 END_DESCRIPTION
 
 Variable_AmortisationDue
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AmortisationFlow
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_AverageBankInterestRate
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_BankAssets
 Total assets of each bank.
-_INIT_
-
 END_DESCRIPTION
 
 Variable_BankCreditSupply
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_BankDividends
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_BankGrossProfits
 Calculate bank's gross profits: interest on loans plus interest on bills.
 'BankGrossProfits' appears in the equation for: BankTaxableIncome
-_INIT_
-
 END_DESCRIPTION
 
 Variable_BankTax
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_BankTaxableIncome
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_BillsBank
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_ChangeBillsBank
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ChangeDepositsBank
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ChangeLoanPortfolio
 Defaults on loans already deduced.
-_INIT_
-
 END_DESCRIPTION
 
 Parameter_DebtServicingRatio
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_DefaultLoans
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_DepositsBank
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_DepositsFromFirms
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_InterestIncome
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Function_InterestRateBank
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_LoanPortfolio
-(no description available)
+
 _INIT_
 All 1 instances equal to 600.
 END_DESCRIPTION
@@ -3365,22 +2849,18 @@ All 1 instances equal to 1.
 END_DESCRIPTION
 
 Variable_NetWorthBank
-(no description available)
+
 _INIT_
 All 1 instances equal to 43.2259.
 END_DESCRIPTION
 
 Variable_NonPerformingLoans
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_UndistributedProfitsBank
 Retained earnings of banks
 'UndistributedProfitsBank' appears in the equation for: FinancialSavingsBankingSector, FinancialSavingsBankingSector_GDP
-_INIT_
-
 END_DESCRIPTION
 
 Parameter_etab
@@ -3390,13 +2870,13 @@ All 1 instances equal to 0.9.
 END_DESCRIPTION
 
 Parameter_idBank
-(no description available)
+
 _INIT_
 All 1 instances equal to 1.
 END_DESCRIPTION
 
 Parameter_interestSpread
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
@@ -3416,86 +2896,66 @@ All 1 instances equal to 1.
 END_DESCRIPTION
 
 Object_Government
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_ChangeGovernmentDebt
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Parameter_Gamma0
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.17.
 END_DESCRIPTION
 
 Parameter_Gamma1
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.1.
 END_DESCRIPTION
 
 Variable_GovernmentConsumption
-(no description available)
-_INIT_
-All 1 instances equal to 5000.
+
 END_DESCRIPTION
 
 Variable_GovernmentDebt
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.
 END_DESCRIPTION
 
 Variable_GovernmentDebtToGDP
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_InterestGovernmentDebt
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_NominalDeficitGovernment
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_NominalGovernmentConsumption
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Variable_TaxToGDP
 Total tax revenue to GDP ratio
 'TaxToGDP' appears in the equation for: (never used)
-_INIT_
-
 END_DESCRIPTION
 
 Variable_TotalTaxRevenues
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Object_CentralBank
-(no description available)
-_INIT_
 
 END_DESCRIPTION
 
 Parameter_BaseInterestRate
-(no description available)
+
 _INIT_
 All 1 instances equal to 0.025.
 END_DESCRIPTION
@@ -3513,42 +2973,87 @@ END_DOCUINITIAL
 
 
 EQ_FILE
-//#define EIGENLIB			// uncomment to use Eigen linear algebra library
+// SCRIPT FOR THE MODEL DEVELOPED IN THE PAPER
+// To what extent does aggregate leverage determine financial fragility? New insights from an agent-based stock-flow consistent model
+// WRITTEN BY ITALO PEDROSA
+
+//#define EIGENLIB				// uncomment to use Eigen linear algebra library
 //#define NO_POINTER_INIT	// uncomment to disable pointer checking
+#define USE_SEARCH
 
 #include "fun_head_fast.h"
+#include <list>
+#include <vector>
+#include <memory>
+#include <numeric> 
+#include <fstream>
+#include <stdlib.h>
+
+// function to import text file with one value
+// imp_data function was initially with auto mytxt
+double imp_data( std::string mytxt, std::string dir, std::string sim )
+{
+	double value;
+	ifstream inFile;
+	std::string file = dir + sim + "_" + mytxt + ".txt";
+	inFile.open( file );
+	inFile >> value;
+	return value;
+}
+
+void exp_data( double value, std::string folder, std::string calF, std::string fileName  )
+{
+	ofstream outFile;
+	outFile.open( folder + calF + "_" + fileName + ".txt" );
+	outFile << value;
+	outFile << "\n";	
+	outFile.close( );
+}
+
+// create vector to store historical data of employment growth
+vector<double> growthEmployment;
+
+// function obtain the nth percentile of a double vector
+double ntile_vector( vector<double> a, float ntile )
+{
+		int n = a.size();
+		sort( a.begin(), a.end() );
+		double index = ntile * n;
+		double result;
+		
+		// check if the index is a whole number.
+		if ( floor ( index ) == index )
+		{
+				result = ( a[ index - 1 ] + a[ index ] ) / 2;
+		}
+		else
+		{
+				index = n == 1 ? ceil( index ) : round( index );
+				result = a[ index - 1 ];
+		}
+		
+		return( result );
+}
 
 MODELBEGIN
 
-////////////////////////////////////////////////////////////////
-// Common equation firms
-////////////////////////////////////////////////////////////////
-EQUATION( "Sales" )
+// The equation files below contains all LSD equations, organized by the
+// container object.
 
-RESULT( VL( "Sales", 1 ) )
-
-
-
-
-////////////////////////////////////////////////////////////////
-// Equations BK1
-////////////////////////////////////////////////////////////////
-
-
-
-
-////////////////////////////////////////////////////////////////
-// Equations BK2
-////////////////////////////////////////////////////////////////
-
-
-
-////////////////////////////////////////////////////////////////
-// Equations Consumption sector
-////////////////////////////////////////////////////////////////
-
-
-
+#include "jeec_initialisation.h"			// Model inicialisation
+#include "jeec_aggregate.h"						// Equations for aggregate data
+#include "jeec_banks.h"								// Equations for banks
+#include "jeec_firms_capital.h"       // Manage capital stock and investment of firms
+#include "jeec_firms_financial.h"     // Manage financial implications of firms' decisions
+#include "jeec_firms_production.h"    // Manage production decisions of firms
+#include "jeec_firms_rd.h"    				// Manage decisions related to R&D
+#include "jeec_government.h"    			// Manage equations related to the government
+#include "jeec_households.h"    			// Manage equations related households/workers
+#include "jeec_labour_market.h"    		// Manage equations related labour market
+#include "jeec_demand_distribution.h" // Manage equations related to the demand distribution
+#include "jeec_entry_exit.h"					// Manage equations related to the entry/exit of firms
+#include "jeec_checks.h" 							// Manage equations with model's checks
+#include "jeec_save.h" 								// Manage equations with model's saved output
 
 MODELEND
 
