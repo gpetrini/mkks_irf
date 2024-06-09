@@ -11,3 +11,9 @@ Also implements a few refinementes, such as:
 * Breaking changes
 
 - git is not tracking some file extension that are either machine-specific (such as *.o) or that bloats the .git folder
+
+* Technical changes
+
+- Alphaleia outmatically handles with code identantion, this might flag some changes in git that are not relevant changes
+- The inclusion of the INTERNALS macro is harmless to the code
+  - In essence, it does nothing. However, this declaration is enough to trigger autocompetion for LSD macros in a few text editors
