@@ -65,10 +65,6 @@ exp_data(V("alpha1"), scriptLocation, rSave, "alpha1");
 // call R script in system
 std::system(fullCommand.c_str());
 
-// Create capital vintage and loans outstanding objects.
-//
-//
-//
 // NOTE: Keeping the same curs
 // NOTE: Trying to make it prepared ofr NO_SEARCH flag
 ECO = cur6 = SEARCHS(ROOT, "Countries");
@@ -79,67 +75,83 @@ HHS = cur3 = SEARCHS(ECO, "Households");
 CBK = cur4 = SEARCHS(ECO, "CentralBank");
 BNK = cur5 = SEARCHS(ECO, "Banks");
 
-v[0] = VS(cur1, "kappa");
-v[1] = VS(cur1, "lambda");
-ADDNOBJS(cur, "CapitalVintage", v[0] - 1);  // add capital vintage objects
-ADDNOBJS(cur, "OutstandingLoan", v[1] - 1); // add loan outstanding objects
+// Create capital vintage and loans outstanding objects.
+double kappa = v[0] = VS(SEC, "kappa");
+double lambda = v[1] = VS(SEC, "lambda");
+ADDNOBJS(CG, "CapitalVintage", kappa - 1);   // add capital vintage objects
+ADDNOBJS(CG, "OutstandingLoan", lambda - 1); // add loan outstanding objects
+
+double ncg = v[2] = VS(CG, "n");
+double INV = imp_data("INV", scriptLocation, rSave);
+double inv = INV / ncg;
+double uD = imp_data("uT", scriptLocation, rSave);
+double SCG = imp_data("S", scriptLocation, rSave);
+double scg = SCG / ncg;
+double LCG = imp_data("L", scriptLocation, rSave);
+double lcg = LCG / ncg;
+double pC = imp_data("P", scriptLocation, rSave);
+double nSCG = pC * SCG;
+double nscg = nSCG / ncg;
+double DCG = imp_data("Df", scriptLocation, rSave);
+double dcg = DCG / ncg;
+double ms = 1 / ncg;
+double w = imp_data("w", scriptLocation, rSave);
+double ACG = imp_data("A", scriptLocation, rSave);
+double ulc = w / ACG;
+double Lev = VS(ROOT, "lev0");
+double etaf = imp_data("etaf", scriptLocation, rSave);
+double thetal = VLS(cur, "Markup", 1); // FIXME: This lag will be tricky
+
+double BG = imp_data("B", scriptLocation, rSave);
+
+double BH = imp_data("Bh", scriptLocation, rSave);
+double DH = imp_data("Dh", scriptLocation, rSave);
+double VH = imp_data("V", scriptLocation, rSave);
+double alpha2 = imp_data("alpha2", scriptLocation, rSave);
+
+double spread = imp_data("spread", scriptLocation, rSave);
+double nB = V("nBanks");
+double nwB = imp_data("nwB", scriptLocation, rSave);
+double nwb = nwB / nB;
+double LB = LCG;
+double lb = LB / nB;
+double BB = imp_data("Bb", scriptLocation, rSave);
+double bb = BB / nB;
+double DB = DCG + DH;
+double db = DB / nB;
+double icb = VS(cur4, "BaseInterestRate");
+double rb = icb + spread;
 
 // Write lagged variables and parameters
-v[2] = VS(cur, "n");
+WRITELLS(CG, "Inventory", inv, 0, 1);
+WRITELLS(CG, "DesiredCapacityUtilisation", uD, 0, 1);
+WRITES(SEC, "normalCapacity", uD);
+WRITELLS(CG, "Sales", scg, 0, 1);
+WRITELLS(CG, "TotalDebt", lcg, 0, 1);
+WRITELLS(CG, "NominalSales", nscg, 0, 1);
+WRITELLS(CG, "ExpectedSales", scg, 0, 1);
+WRITELLS(CG, "FirmDemand", scg, 0, 1);
+WRITELLS(CG, "FirmDeposits", dcg, 0, 1);
+WRITELLS(CG, "MarketShare", ms, 0, 1);
+WRITELLS(CG, "MarketShare", ms, 0, 2);
+WRITELLS(CG, "UnitCost", ulc, 0, 1);
+WRITELLS(CG, "Leverage", Lev, 0, 1);
+WRITELLS(CG, "AvgLabourProductivity", ACG, 0, 1);
+WRITES(SEC, "etaf", etaf);
+WRITES(SEC, "initialMarkup", thetal);
+WRITELLS(GOV, "GovernmentDebt", BG, 0, 1);
+WRITELLS(HHS, "HouseholdDeposits", DH, 0, 1);
+WRITELLS(HHS, "HouseholdWealth", VH, 0, 1);
+WRITELLS(HHS, "HouseholdBills", BH, 0, 1);
+WRITES(HHS, "alpha2", alpha2);
+WRITES(BNK, "interestSpread", spread);
+WRITELLS(BNK, "NetWorthBank", nwb, 0, 1);
+WRITELLS(BNK, "LoanPortfolio", lb, 0, 1);
+WRITELLS(BNK, "BillsBank", bb, 0, 1);
+WRITELLS(BNK, "DepositsBank", db, 0, 1);
+WRITELLS(BNK, "AverageBankInterestRate", rb, 0, 1);
 
-WRITELLS(cur, "Inventory", imp_data("INV", scriptLocation, rSave) / v[2], 0, 1);
-WRITELLS(cur, "DesiredCapacityUtilisation",
-         imp_data("uT", scriptLocation, rSave), 0, 1);
-WRITES(cur1, "normalCapacity", imp_data("uT", scriptLocation, rSave));
-
-WRITELLS(cur, "Sales", imp_data("S", scriptLocation, rSave) / v[2], 0, 1);
-// PLOG( "\n" );
-// PLOG( "%f", VLS( cur, "Sales", 1 ) );
-WRITELLS(cur, "TotalDebt", imp_data("L", scriptLocation, rSave) / v[2], 0, 1);
-WRITELLS(cur, "NominalSales",
-         imp_data("S", scriptLocation, rSave) / v[2] *
-             imp_data("P", scriptLocation, rSave),
-         0, 1);
-WRITELLS(cur, "ExpectedSales", imp_data("S", scriptLocation, rSave) / v[2], 0,
-         1);
-WRITELLS(cur, "FirmDemand", imp_data("S", scriptLocation, rSave) / v[2], 0, 1);
-WRITELLS(cur, "FirmDeposits", imp_data("Df", scriptLocation, rSave) / v[2], 0,
-         1);
-WRITELLS(cur, "MarketShare", 1 / v[2], 0, 1);
-WRITELLS(cur, "MarketShare", 1 / v[2], 0, 2);
-WRITELLS(cur, "UnitCost",
-         imp_data("w", scriptLocation, rSave) /
-             imp_data("A", scriptLocation, rSave),
-         0, 1);
-WRITELLS(cur, "Leverage", VS(root, "lev0"), 0, 1);
-WRITELLS(cur, "AvgLabourProductivity", imp_data("A", scriptLocation, rSave), 0,
-         1);
-WRITES(cur1, "etaf", imp_data("etaf", scriptLocation, rSave));
-WRITES(cur1, "initialMarkup", VLS(cur, "Markup", 1));
-WRITELLS(cur2, "GovernmentDebt", imp_data("B", scriptLocation, rSave), 0, 1);
-WRITELLS(cur3, "HouseholdDeposits", imp_data("Dh", scriptLocation, rSave), 0,
-         1);
-WRITELLS(cur3, "HouseholdWealth", imp_data("V", scriptLocation, rSave), 0, 1);
-WRITELLS(cur3, "HouseholdBills", imp_data("Bh", scriptLocation, rSave), 0, 1);
-WRITES(cur3, "alpha2", imp_data("alpha2", scriptLocation, rSave));
-WRITES(cur5, "interestSpread", imp_data("spread", scriptLocation, rSave));
-WRITELLS(cur5, "NetWorthBank",
-         imp_data("nwB", scriptLocation, rSave) / V("nBanks"), 0, 1);
-WRITELLS(cur5, "LoanPortfolio",
-         imp_data("L", scriptLocation, rSave) / V("nBanks"), 0, 1);
-WRITELLS(cur5, "BillsBank", imp_data("Bb", scriptLocation, rSave) / V("nBanks"),
-         0, 1);
-WRITELLS(cur5, "DepositsBank",
-         (imp_data("Df", scriptLocation, rSave) +
-          imp_data("Dh", scriptLocation, rSave)) /
-             V("nBanks"),
-         0, 1);
-WRITELLS(cur5, "AverageBankInterestRate",
-         VS(cur4, "BaseInterestRate") +
-             imp_data("spread", scriptLocation, rSave),
-         0, 1);
-
-CYCLE(cur, "Countries") {
+CYCLES(ROOT, cur, "Countries") {
   WRITELS(cur, "AggregateDebtFirms", imp_data("L", scriptLocation, rSave), 0);
   WRITELLS(cur, "Inflation", VS(root, "inf0"), 0, 1);
   WRITELLS(cur, "NominalWage", imp_data("w", scriptLocation, rSave), 0, 1);
