@@ -11,6 +11,6 @@ MKKS-IRF
 #
 Data_analysis/Base_scen/S1.lsd
 Root
-2
-0
+1
+16
 0.0

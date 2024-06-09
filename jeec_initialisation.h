@@ -38,6 +38,47 @@ PLOG("\nCommand sent to system was: ");
 PLOG(fullCommand.c_str());
 
 // access values of parameters to feed into r and get the steady state values.
+
+// NOTE: Keeping the same curs
+// NOTE: Trying to make it prepared ofr NO_SEARCH flag
+ECO = cur6 = SEARCHS(ROOT, "Countries");
+SEC = cur1 = SEARCHS(ECO, "Sectors");
+CG = cur = SEARCHS(SEC, "Firms");
+GOV = cur2 = SEARCHS(ECO, "Government");
+HHS = cur3 = SEARCHS(ECO, "Households");
+CBK = cur4 = SEARCHS(ECO, "CentralBank");
+BNK = cur5 = SEARCHS(ECO, "Banks");
+
+// NOTE: Inputs for the SS solveing internally
+double gK0 = VS(root, "gk0");
+double infla = VS(ROOT, "inf0");
+double u0 = VS(ROOT, "u0");
+double K0 = VS(ROOT, "K0");
+double nu = VS(SEC, "nu");
+double Lab = VS(ROOT, "Nf0");
+double gamma = VS(SEC, "gamma");
+double iota = VS(SEC, "iota");
+double h0 = VS(ROOT, "h0");
+double Gamma = VS(GOV, "Gamma0");
+double Lev = VS(ROOT, "lev0");
+double Assets0 = VS(ROOT, "Assets0");
+double r0 = VS(ROOT, "r0");
+double thetal = VLS(CG, "Markup", 1);
+double nk = VS(ROOT, "nk0");
+double ibk = VS(ROOT, "ibk0");
+double lambda = v[1] = VS(SEC, "lambda");
+double tau2 = VS(ECO, "tau2");
+double baserate = VS(CBK, "BaseInterestRate");
+double etab = VS(BNK, "etab");
+double gDebGDP = VS(ROOT, "gDebtGDP0");
+double betaH = VS(ECO, "beta");
+double alpha1 = VS(HHS, "alpha1");
+double kappa = v[0] = VS(SEC, "kappa");
+double ncg = v[2] = VS(CG, "n");
+double Kfill = VS(root, "kFilledInit");
+double etaf1 = V("etaf1");
+double epsilon = VS(ECO, "epsilon");
+
 exp_data(V("gk0"), scriptLocation, rSave, "gk");
 exp_data(V("inf0"), scriptLocation, rSave, "inf");
 exp_data(V("u0"), scriptLocation, rSave, "u");
@@ -65,23 +106,8 @@ exp_data(V("alpha1"), scriptLocation, rSave, "alpha1");
 // call R script in system
 std::system(fullCommand.c_str());
 
-// NOTE: Keeping the same curs
-// NOTE: Trying to make it prepared ofr NO_SEARCH flag
-ECO = cur6 = SEARCHS(ROOT, "Countries");
-SEC = cur1 = SEARCHS(ECO, "Sectors");
-CG = cur = SEARCHS(SEC, "Firms");
-GOV = cur2 = SEARCHS(ECO, "Government");
-HHS = cur3 = SEARCHS(ECO, "Households");
-CBK = cur4 = SEARCHS(ECO, "CentralBank");
-BNK = cur5 = SEARCHS(ECO, "Banks");
+double gss = imp_data("gss", scriptLocation, rSave);
 
-// Create capital vintage and loans outstanding objects.
-double kappa = v[0] = VS(SEC, "kappa");
-double lambda = v[1] = VS(SEC, "lambda");
-ADDNOBJS(CG, "CapitalVintage", kappa - 1);   // add capital vintage objects
-ADDNOBJS(CG, "OutstandingLoan", lambda - 1); // add loan outstanding objects
-
-double ncg = v[2] = VS(CG, "n");
 double INV = imp_data("INV", scriptLocation, rSave);
 double inv = INV / ncg;
 double uD = imp_data("uT", scriptLocation, rSave);
@@ -98,9 +124,12 @@ double ms = 1 / ncg;
 double w = imp_data("w", scriptLocation, rSave);
 double ACG = imp_data("A", scriptLocation, rSave);
 double ulc = w / ACG;
-double Lev = VS(ROOT, "lev0");
 double etaf = imp_data("etaf", scriptLocation, rSave);
-double thetal = VLS(cur, "Markup", 1); // FIXME: This lag will be tricky
+double k0 = K0 / ncg;
+double WB = w * Lab;
+double wb = WB / ncg;
+double CF = nSCG - WB;
+double cf = nscg - wb;
 
 double BG = imp_data("B", scriptLocation, rSave);
 
@@ -119,8 +148,14 @@ double BB = imp_data("Bb", scriptLocation, rSave);
 double bb = BB / nB;
 double DB = DCG + DH;
 double db = DB / nB;
-double icb = VS(cur4, "BaseInterestRate");
+double icb = VS(CBK, "BaseInterestRate");
 double rb = icb + spread;
+
+double tau1 = imp_data("tau1", scriptLocation, rSave);
+
+// Create capital vintage and loans outstanding objects.
+ADDNOBJS(CG, "CapitalVintage", kappa - 1);   // add capital vintage objects
+ADDNOBJS(CG, "OutstandingLoan", lambda - 1); // add loan outstanding objects
 
 // Write lagged variables and parameters
 WRITELLS(CG, "Inventory", inv, 0, 1);
@@ -137,13 +172,17 @@ WRITELLS(CG, "MarketShare", ms, 0, 2);
 WRITELLS(CG, "UnitCost", ulc, 0, 1);
 WRITELLS(CG, "Leverage", Lev, 0, 1);
 WRITELLS(CG, "AvgLabourProductivity", ACG, 0, 1);
+
 WRITES(SEC, "etaf", etaf);
 WRITES(SEC, "initialMarkup", thetal);
+
 WRITELLS(GOV, "GovernmentDebt", BG, 0, 1);
+
 WRITELLS(HHS, "HouseholdDeposits", DH, 0, 1);
 WRITELLS(HHS, "HouseholdWealth", VH, 0, 1);
 WRITELLS(HHS, "HouseholdBills", BH, 0, 1);
 WRITES(HHS, "alpha2", alpha2);
+
 WRITES(BNK, "interestSpread", spread);
 WRITELLS(BNK, "NetWorthBank", nwb, 0, 1);
 WRITELLS(BNK, "LoanPortfolio", lb, 0, 1);
@@ -151,193 +190,118 @@ WRITELLS(BNK, "BillsBank", bb, 0, 1);
 WRITELLS(BNK, "DepositsBank", db, 0, 1);
 WRITELLS(BNK, "AverageBankInterestRate", rb, 0, 1);
 
-CYCLES(ROOT, cur, "Countries") {
-  WRITELS(cur, "AggregateDebtFirms", imp_data("L", scriptLocation, rSave), 0);
-  WRITELLS(cur, "Inflation", VS(root, "inf0"), 0, 1);
-  WRITELLS(cur, "NominalWage", imp_data("w", scriptLocation, rSave), 0, 1);
-  WRITELLS(cur, "PriceLevel", imp_data("P", scriptLocation, rSave), 0, 1);
-  WRITELLS(cur, "AggregateCapitalStock", VS(root, "K0"), 0, 1);
-  WRITELLS(cur, "AggregateCapacityUtilisation",
-           imp_data("uT", scriptLocation, rSave), 0, 1);
-  WRITELLS(cur, "AggregateInventories", imp_data("INV", scriptLocation, rSave),
-           0, 1);
-  WRITELLS(cur, "AggregateFirmDeposits", imp_data("Df", scriptLocation, rSave),
-           0, 1);
-  WRITELLS(cur, "TotalLabour", VS(root, "Nf0"), 0, 1);
-  WRITELLS(cur, "GrowthRateEmployment", imp_data("gss", scriptLocation, rSave),
-           0, 1);
-  WRITELLS(cur, "AggregateGrowthProductivity", VS(root, "gk0"), 0, 1);
-  WRITELLS(cur, "AggregateProductivity", imp_data("A", scriptLocation, rSave),
-           0, 1);
-  WRITES(cur, "tau1", imp_data("tau1", scriptLocation, rSave));
-  WRITES(cur, "beta", imp_data("beta", scriptLocation, rSave));
+WRITELS(ECO, "AggregateDebtFirms", LCG, 0);
+WRITELLS(ECO, "Inflation", infla, 0, 1);
+WRITELLS(ECO, "NominalWage", w, 0, 1);
+WRITELLS(ECO, "PriceLevel", pC, 0, 1);
+WRITELLS(ECO, "AggregateCapitalStock", K0, 0, 1);
+WRITELLS(ECO, "AggregateCapacityUtilisation", uD, 0, 1);
+WRITELLS(ECO, "AggregateInventories", INV, 0, 1);
+WRITELLS(ECO, "AggregateFirmDeposits", DCG, 0, 1);
+WRITELLS(ECO, "TotalLabour", Lab, 0, 1);
+WRITELLS(ECO, "GrowthRateEmployment", gss, 0, 1);
+WRITELLS(ECO, "AggregateGrowthProductivity", gK0, 0, 1);
+WRITELLS(ECO, "AggregateProductivity", ACG, 0, 1);
+WRITES(ECO, "tau1", tau1);
+WRITES(ECO, "beta", betaH);
 
-  // import external initial values and replace them into model's variables
-  cur1 = SEARCH("Firms");
-  v[0] = VS(cur1, "n");
-
-  // initialise capital vintages' values
-  v[1] = VS(root, "K0") / v[0];
-  v[2] = VS(root, "kFilledInit"); // number of capital vintages to create to be
-                                  // != 0 capital quantity
-  v[3] = VS(root, "gk0");
-  v[4] = 0; // aggregator
-  v[5] = imp_data("P", scriptLocation, rSave);
-  v[6] = VS(root, "inf0");
-
-  // Cycle in capital vintages and pass values
-  v[7] = 1;
-  v[8] = v[2];
-  CYCLES(cur1, cur2, "CapitalVintage") {
-    if (v[8] > 0) {
-      v[9] = v[1] / pow(1 + v[3], v[7]);
-      WRITELLS(cur2, "CapitalQuantity", v[9], 0, 1);
-      v[10] = v[5] / pow((1 + v[6]), v[7] - 1);
-      WRITES(cur2, "VintagePrice", v[10]);
-      WRITES(cur2, "VintageTime", T - v[7]);
-      WRITES(cur2, "scrapTime", V("kappa") - v[7] + 1);
-    }
-    v[7]++;
-    v[8]--;
+// Cycle in capital vintages and pass values
+double Kfilled = v[7] = 1;
+double KtoFill = v[8] = Kfill;
+double pK = 0;
+CYCLES(CG, cur2, "CapitalVintage") {
+  if (KtoFill > 0) {
+    double vintk = v[9] = k0 / pow(1 + gK0, Kfilled);
+    WRITELLS(cur2, "CapitalQuantity", vintk, 0, 1);
+    pK = v[10] = pC / pow((1 + infla), Kfilled - 1);
+    WRITES(cur2, "VintagePrice", pK);
+    WRITES(cur2, "VintageTime", T - Kfilled);
+    WRITES(cur2, "scrapTime", kappa - Kfilled + 1);
   }
-  WRITELLS(cur1, "NominalCapitalStock",
-           WHTAVES(cur1, "CapitalQuantity", "VintagePrice"), 0, 1);
+  Kfilled++;
+  KtoFill--;
+}
+double knom = WHTAVES(CG, "CapitalQuantity", "VintagePrice");
+WRITELLS(CG, "NominalCapitalStock", knom, 0, 1);
 
-  // normalise values (capital quantity) to total initial capital stock and fill
-  // technology variables (frontier and vintages' productivity)
-  v[10] = SUMLS(cur1, "CapitalQuantity", 1);
-  v[11] = 0;
-  v[12] = 1 / pow(1 + v[3], 2);
-  v[13] = imp_data("A", scriptLocation, rSave);
-  v[14] = MAXS(cur1, "CapitalQuantity") / v[10] * v[1];
-  v[15] =
-      v[1] * v[13] * (1 + v[3]) / v[14] * (v[12] - 1) / (pow(v[12], v[2]) - 1);
-  v[16] = 1;
-  WRITELLS(cur1, "ACurrent", v[15], 0, 1);
-  CYCLES(cur1, cur2, "CapitalVintage") {
-    v[9] = VLS(cur2, "CapitalQuantity", 1) / v[10] * v[1];
-    WRITELLS(cur2, "CapitalQuantity", v[9], 0, 1);
-    v[17] = v[16] <= v[2] ? v[15] / pow(1 + v[3], v[16]) : 0;
-    WRITES(cur2, "VintageProductivity", v[17]);
-    v[11] += v[9];
-    v[16]++;
-  }
-
-  // Pass loan values to outstanding loan object
-  v[18] =
-      imp_data("L", scriptLocation, rSave) / v[0]; // total debt of each firm
-  v[19] = (1 + v[3]) * (1 + v[6]) - 1; // initial condition nominal gdp growth
-  v[20] = V("lambda");
-  v[21] = 0; // aggregator
-  for (int j = 0; j < v[20]; j++) {
-    v[22] = (v[20] - j) / v[20];
-    v[23] = 1 / pow(1 + v[19], j);
-    v[21] += v[22] * v[23];
-  }
-  v[24] = v[18] / v[21]; // value of first loan oustanding
-  v[25] = V("BaseInterestRate");
-  v[26] = imp_data("spread", scriptLocation, rSave);
-  v[27] = v[25] + v[26];
-  v[28] = 0;
-  v[38] = 0;
-  CYCLES(cur1, cur2, "OutstandingLoan") {
-    v[29] = v[24] / pow(1 + v[19], v[28]); // loan initially acquired
-    v[30] = v[29] / v[20];                 // amortisation schedule
-    v[31] = (v[20] - v[28]) / v[20]; // discount factor of already repaid loans
-    v[32] = v[31] * v[29];           // outstanding loan by object's instance
-    v[38] += v[32] * v[27];
-    WRITELLS(cur2, "LoanOutstanding", v[32], 0, 1);
-    WRITES(cur2, "LoanInterestRate", v[27]);
-    WRITES(cur2, "AmortisationSchedule", v[30]);
-    WRITES(cur2, "PeriodsRemaining", v[20] - v[28]);
-    v[28]++;
-  }
-
-  // Dividend equality
-  v[33] = VS(cur1, "etaf");
-  v[34] = V("etaf1");
-  v[35] = SUMS(cur1, "AmortisationSchedule");
-  v[36] = v[35] + v[38];                                 // total debt servicing
-  v[37] = VL("NominalWage", 1) * VS(root, "Nf0") / v[0]; // wage bill
-  v[39] = VLS(cur1, "NominalSales", 1) - v[37];          // operating cash flow
-  v[40] = v[36] / v[39]; // debt servicing to cash flow ratio
-  v[41] = log((2 * v[34] - v[33]) / v[33]) / v[40];
-  WRITES(cur1->up, "varepsilon", v[41]);
-  WRITELLS(cur1, "DebtServicingToOperatingCashFlowRatio", v[40], 0, 1);
-
-  // bank interest rate parameter
-  v[42] = V("interestSpread");
-  v[43] = v[42] / v[40];
-
-  CYCLES(cur, cur1, "Sectors") {
-    v[0] = VS(cur1, "n") - 1; // number of firms to be added in sector
-    v[1] = MINS(cur1, "idFirm");
-    cur2 = SEARCH_CNDS(cur1, "idFirm", v[1]);
-    ADDNOBJ_EXLS(cur1, "Firms", v[0], cur2,
-                 0); // add identical firms in each sector
-
-    // work some unique values in firm-level
-    int i = 1; // initialise index for firms' ID
-    CYCLES(cur1, cur2, "Firms") {
-      WRITES(cur2, "idFirm", i);
-      i++;
-    }
-  }
-
-  // create banks
-  v[5] = VS(cur, "nBanks");
-  ADDNOBJS(cur, "Banks", v[5] - 1);
-  i = 1;
-  CYCLES(cur, cur1, "Banks") {
-    WRITES(cur1, "mu", v[43]);
-    WRITES(cur1, "idBank", i);
-    i++;
-  }
+// normalise values (capital quantity) to total initial capital stock and fill
+// technology variables (frontier and vintages' productivity)
+double Kcg = v[10] = SUMLS(CG, "CapitalQuantity", 1);
+double Krev = v[11] = 0;
+double auxL = v[12] = 1 / pow(1 + gK0, 2);
+double Knst = v[14] = MAXS(CG, "CapitalQuantity") / Kcg * k0;
+double Aadj = v[15] =
+    k0 * ACG * (1 + gK0) / Knst * (auxL - 1) / (pow(auxL, Kfill) - 1);
+double Kcont = v[16] = 1;
+WRITELLS(CG, "ACurrent", Aadj, 0, 1);
+CYCLES(CG, cur2, "CapitalVintage") {
+  double Kadj = v[9] = VLS(cur2, "CapitalQuantity", 1) / Kcg * k0;
+  WRITELLS(cur2, "CapitalQuantity", Kadj, 0, 1);
+  double Ak = v[17] = Kcont <= Kfill ? Aadj / pow(1 + gK0, Kcont) : 0;
+  WRITES(cur2, "VintageProductivity", Ak);
+  Krev += Kadj;
+  Kcont++;
 }
 
-CYCLE(cur, "Countries") {
+// Pass loan values to outstanding loan object
+double Lpaid = v[21] = 0; // aggregator
+for (int j = 0; j < lambda; j++) {
+  double discount = v[22] = (lambda - j) / lambda;
+  double auxLnom = v[23] = 1 / pow(1 + gss, j);
+  Lpaid += discount * auxLnom;
+}
+double Lout0 = v[24] = lcg / Lpaid; // value of first loan oustanding
+double countL = v[28] = 0;
+double iLcg = v[38] = 0;
+CYCLES(CG, cur2, "OutstandingLoan") {
+  double Linit = v[29] =
+      Lout0 / pow(1 + gss, countL);   // loan initially acquired
+  double am = v[30] = Linit / lambda; // amortisation schedule
+  double discountL = v[31] =
+      (lambda - countL) / lambda; // discount factor of already repaid loans
+  double Lout = v[32] =
+      discountL * Linit; // outstanding loan by object's instance
+  iLcg += Lout * rb;
+  WRITELLS(cur2, "LoanOutstanding", Lout, 0, 1);
+  WRITES(cur2, "LoanInterestRate", rb);
+  WRITES(cur2, "AmortisationSchedule", am);
+  WRITES(cur2, "PeriodsRemaining", lambda - countL);
+  countL++;
+}
 
-  // initialise network of firms and banks (per sector)
-  v[11] = V("nBanks");
-  CYCLES(cur, cur1, "Sectors") {
-    v[12] = VS(cur1, "n");
-    v[13] = v[12] / v[11];     // number of firms per bank
-    if (v[13] != floor(v[13])) // is the number of firms per bank an integer?
-    {                          // no
-      plog("\nERROR: program was terminated.\nNumber of firms per bank is not "
-           "an integer.\nMake sure N Firms divided by N Banks is an integer in "
-           "all sectors.");
-      std::terminate();
-    }
-    v[14] = 0;
-    v[15] = 1;
-    CYCLES(cur1, cur2, "Firms") {
-      v[14] = floor(v[14]) == 0 ? v[13] : v[14];
-      cur3 = SEARCH_CND("idBank", v[15]);
-      ADDHOOKS(cur2, VS(cur, "epsilon"));
-      WRITE_HOOKS(cur2, 0, cur3);
-      WRITES(cur2, "BankID", v[15]);
-      // id the object "OutstandingLoan" with bankID
-      CYCLES(cur2, cur4, "OutstandingLoan") {
-        WRITES(cur4, "BankSupplierID", v[15]);
-        WRITE_SHOOKS(cur4, cur3);
-      }
-      v[14] -= 1;
-      if (v[14] == 0)
-        v[15]++;
-    }
-  }
+// Dividend equality
+double AM = v[35] = SUMS(CG, "AmortisationSchedule");
+double DS = v[36] = AM + iLcg;  // total debt servicing
+double ds_cf = v[40] = DS / cf; // debt servicing to cash flow ratio
+double varepsilon = v[41] = log((2 * etaf1 - etaf) / etaf) / ds_cf;
+WRITES(SEC, "varepsilon", varepsilon);
+WRITELLS(CG, "DebtServicingToOperatingCashFlowRatio", ds_cf, 0, 1);
 
-  // initialise hooks for banks (number of firms)
-  v[16] = 0;
-  CYCLES(cur, cur1, "Sectors") { v[16] += VS(cur1, "n"); }
-  CYCLES(cur, cur1, "Banks") {
-    ADDHOOKS(cur1, v[16]);
-    for (i = 0; i < COUNT_HOOKS(cur1); i++) {
-      cur2 = SEARCH_CND("idFirm", i + 1);
-      WRITE_HOOKS(cur1, i, cur2);
-      // WRITELLS( cur2, "BankID", i, T, 1 );
-    }
+// bank interest rate parameter
+double mu = v[43] = spread / ds_cf;
+
+double idBank = v[15] = 1;
+WRITES(BNK, "mu", mu);
+WRITES(BNK, "idBank", i);
+ADDHOOKS(BNK, ncg);
+WRITES(BNK, "idBank", idBank);
+
+ADDNOBJ_EXLS(SEC, "Firms", ncg - 1, CG,
+             0); // add identical firms in each sector
+
+// work some unique values in firm-level
+i = 1; // initialise index for firms' ID
+CYCLES(SEC, cur2, "Firms") {
+  WRITES(cur2, "idFirm", i);
+
+  ADDHOOKS(cur2, epsilon);
+  WRITE_HOOKS(BNK, i - 1, cur2);
+  WRITE_HOOKS(cur2, 0, BNK);
+  WRITES(cur2, "BankID", idBank);
+  i++;
+  CYCLES(cur2, cur4, "OutstandingLoan") {
+    WRITES(cur4, "BankSupplierID", idBank);
+    WRITE_SHOOKS(cur4, BNK);
   }
 }
 PARAMETER;
