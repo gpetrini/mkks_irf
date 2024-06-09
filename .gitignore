@@ -32,3 +32,4 @@
 !*.old_bak
 !*.sh
 !.gitkeep
+*lsd
