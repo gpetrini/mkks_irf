@@ -17,6 +17,17 @@
 #include <stdlib.h>
 #include <vector>
 
+object *ECO;
+object *HHS;
+object *SEC;
+object *BNK;
+object *GOV;
+object *CBK;
+object *SFC; // NOTE: Not used yet
+object *SHK; // NOTE: Not used yet
+
+object *CG; // NOTE: Points only at the first object
+
 // function to import text file with one value
 // imp_data function was initially with auto mytxt
 double imp_data(std::string mytxt, std::string dir, std::string sim) {
