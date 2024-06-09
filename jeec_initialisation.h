@@ -66,12 +66,19 @@ exp_data(V("alpha1"), scriptLocation, rSave, "alpha1");
 std::system(fullCommand.c_str());
 
 // Create capital vintage and loans outstanding objects.
-cur = SEARCH("Firms");
-cur1 = SEARCH("Sectors");
-cur2 = SEARCH("Government");
-cur3 = SEARCH("Households");
-cur4 = SEARCH("CentralBank");
-cur5 = SEARCH("Banks");
+//
+//
+//
+// NOTE: Keeping the same curs
+// NOTE: Trying to make it prepared ofr NO_SEARCH flag
+ECO = cur6 = SEARCHS(ROOT, "Countries");
+SEC = cur1 = SEARCHS(ECO, "Sectors");
+CG = cur = SEARCHS(SEC, "Firms");
+GOV = cur2 = SEARCHS(ECO, "Government");
+HHS = cur3 = SEARCHS(ECO, "Households");
+CBK = cur4 = SEARCHS(ECO, "CentralBank");
+BNK = cur5 = SEARCHS(ECO, "Banks");
+
 v[0] = VS(cur1, "kappa");
 v[1] = VS(cur1, "lambda");
 ADDNOBJS(cur, "CapitalVintage", v[0] - 1);  // add capital vintage objects
