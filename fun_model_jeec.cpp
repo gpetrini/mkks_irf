@@ -63,20 +63,33 @@ MODELBEGIN
 // The equation files below contains all LSD equations, organized by the
 // container object.
 
-#include "jeec_aggregate.h" // Equations for aggregate data
-#include "jeec_banks.h"     // Equations for banks
-#include "jeec_checks.h"    // Manage equations with model's checks
-#include "jeec_demand_distribution.h" // Manage equations related to the demand distribution
-#include "jeec_entry_exit.h" // Manage equations related to the entry/exit of firms
-#include "jeec_firms_capital.h" // Manage capital stock and investment of firms
-#include "jeec_firms_financial.h" // Manage financial implications of firms' decisions
-#include "jeec_firms_production.h" // Manage production decisions of firms
-#include "jeec_firms_rd.h"         // Manage decisions related to R&D
-#include "jeec_government.h"       // Manage equations related to the government
-#include "jeec_households.h"     // Manage equations related households/workers
 #include "jeec_initialisation.h" // Model inicialisation
-#include "jeec_labour_market.h"  // Manage equations related labour market
-#include "jeec_save.h"           // Manage equations with model's saved output
+
+#include "jeec_aggregate.h" // Equations for aggregate data
+
+#include "jeec_banks.h" // Equations for banks
+
+#include "jeec_firms_capital.h" // Manage capital stock and investment of firms
+
+#include "jeec_firms_financial.h" // Manage financial implications of firms' decisions
+
+#include "jeec_firms_production.h" // Manage production decisions of firms
+
+#include "jeec_firms_rd.h" // Manage decisions related to R&D
+
+#include "jeec_government.h" // Manage equations related to the government
+
+#include "jeec_households.h" // Manage equations related households/workers
+
+#include "jeec_labour_market.h" // Manage equations related labour market
+
+#include "jeec_demand_distribution.h" // Manage equations related to the demand distribution
+
+#include "jeec_entry_exit.h" // Manage equations related to the entry/exit of firms
+
+#include "jeec_checks.h" // Manage equations with model's checks
+
+#include "jeec_save.h" // Manage equations with model's saved output
 
 MODELEND
 
