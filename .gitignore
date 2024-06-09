@@ -1,0 +1,34 @@
+# ignore every file
+*.*
+
+# ensure some problematic files
+*.res.gz
+*.o
+
+!.gitignore
+!*.org
+!*.md
+
+# except gitignore, readme, do and other files
+!README.md
+!*.do
+!*.md
+!*.csv
+!*.py
+!*.R
+!*.Rmd
+!*.tex
+!*.txt
+!*.bib
+!*.xlsx
+!*.xls
+!*.sty
+!*.el
+!*.lsd
+!*.h
+!*.cpp
+.*/log.txt
+!*.sa
+!*.old_bak
+!*.sh
+!.gitkeep

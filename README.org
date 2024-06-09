@@ -1,7 +1,11 @@
-#+title: Read
+#+title: IRF-augmented MKKS model
 #+bibliography: ~/Org/zoter_refs.bib
+
+* Overview
 
 This fork implements State-depended IRF as described by [cite/t:@amendola_2024_linear].
 Also implements a few refinementes, such as:
 
 -
+
+* Breaking changes
