@@ -9,3 +9,5 @@ Also implements a few refinementes, such as:
 -
 
 * Breaking changes
+
+- git is not tracking some file extension that are either machine-specific (such as *.o) or that bloats the .git folder
