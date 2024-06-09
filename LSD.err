@@ -854,3 +854,22 @@ command returned bad code: 2
 Message:
 command returned bad code: 2
 -----
+
+
+====================> NEW TCL SESSION
+
+(06/09/24 11:35:21)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+(06/09/24 11:35:39)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
