@@ -1,0 +1,7 @@
+#+title: Read
+#+bibliography: ~/Org/zoter_refs.bib
+
+This fork implements State-depended IRF as described by [cite/t:@amendola_2024_linear].
+Also implements a few refinementes, such as:
+
+-
