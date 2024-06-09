@@ -7,7 +7,7 @@ SWITCH_CC_LNK=
 
 # System compilation options
 # LSD options
-LSDROOT=/home/italo/LSD
+LSDROOT=/home/gpetrini/LSD
 SRC=src
 
 # Libraries options
@@ -21,7 +21,7 @@ LIB=-lz -lpthread
 
 # Compiler options
 CC=g++
-GLOBAL_CC=-march=native -w
+GLOBAL_CC=-march=native -ffp-contract=off -std=gnu++14 -w
 SSWITCH_CC=-fnon-call-exceptions -O3
 
 # Body of makefile (from makefile_linux.txt)

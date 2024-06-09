@@ -835,3 +835,22 @@ LsdExit
 Message:
 invalid command name "LsdExit"
 -----
+
+
+====================> NEW TCL SESSION
+
+(06/09/24 11:24:42)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+(06/09/24 11:24:58)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
