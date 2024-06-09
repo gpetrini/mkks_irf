@@ -131,4 +131,9 @@ for( i in 1 : length( tmpFiles ) ){
   file.remove( paste0( folder, tmpFiles[ i ] ) )
 }
 
-cat( "\nR code successfully run...")
+cat( "\nR code successfully run...\n")
+
+cat(
+  sfcr_get_blocks(sim) %>%
+  as.data.frame()
+)
