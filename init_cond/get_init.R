@@ -133,7 +133,7 @@ for( i in 1 : length( tmpFiles ) ){
 
 cat( "\nR code successfully run...\n")
 
-cat(
-  sfcr_get_blocks(sim) %>%
-  as.data.frame()
-)
+## cat(
+##   sfcr_get_blocks(sim) %>%
+##   as.data.frame()
+## )

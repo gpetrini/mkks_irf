@@ -70,7 +70,7 @@ double lambda = v[1] = VS(SEC, "lambda");
 double tau2 = VS(ECO, "tau2");
 double baserate = VS(CBK, "BaseInterestRate");
 double etab = VS(BNK, "etab");
-double gDebGDP = VS(ROOT, "gDebtGDP0");
+double gDebtGDP = VS(ROOT, "gDebtGDP0");
 double betaH = VS(ECO, "beta");
 double alpha1 = VS(HHS, "alpha1");
 double kappa = v[0] = VS(SEC, "kappa");
@@ -78,6 +78,124 @@ double ncg = v[2] = VS(CG, "n");
 double Kfill = VS(root, "kFilledInit");
 double etaf1 = V("etaf1");
 double epsilon = VS(ECO, "epsilon");
+
+// NOTE: Solving SS system
+
+double spread = ibk - baserate;
+double LCG = Lev * Assets0;
+double G = (Gamma * K0) / (1 + gK0);
+double uT = u0 - 0.02;
+double Yp = K0 / (nu * (1 + gK0));
+double Y = Yp * u0;
+double ICG = h0 * Y;
+double DeltaReal = (gK0) / (1 + gK0);
+double SCG = (Y / (1 + DeltaReal * iota));
+double INV = iota * SCG;
+double C = SCG - ICG - G;
+double RD = gamma * SCG / (1 + gK0);
+double ACG = (u0 * K0 + nu * RD * (1 + gK0)) / (nu * Lab);
+double gss = (1 + gK0) * (1 + infla) - 1;
+
+double sumAm_cg = 0;
+for (int j = 1; j <= lambda; j++) {
+  double lag = 1 / pow(1 + gss, j);
+  sumAm_cg += lag;
+}
+double sumAm = sumAm_cg;
+double ra = (gss * sumAm) / (lambda - sumAm);
+double AM0 = (gss + ra) / (lambda * (1 + gss)) * LCG * sumAm;
+// Begin BLOCK 16
+// NOTE: Using values not far from the solution as a initial guess
+double P = 0.05;
+double w = .5;
+double ucf = .35;
+double DCG = 25000;
+double tol = 1e-06;
+for (i = 0; i < 1e05; i++) {
+  // NOTE: Store old updates
+  double P0 = P;
+  double w0 = w;
+  double ucf0 = ucf;
+  double DCG0 = DCG;
+  // NOTE: restore errors
+  double err = 0;
+
+  // NOTE: Writing the system
+  P = (Assets0 - DCG) / (r0 * K0 + INV / (1 + thetal));
+  ucf = P / (1 + thetal);
+  w = ucf * ACG;
+  DCG = (P * ICG + w * Lab - AM0 - LCG * (gss / (1 + gss))) * (1 + gss);
+
+  err += fabs(P - P0);
+  err += fabs(w - w0);
+  err += fabs(ucf - ucf0);
+  err += fabs(DCG - DCG0);
+
+  if (err < tol) {
+    break;
+  }
+}
+// End BLOCK 16
+double BG = gDebtGDP * P * Y;
+double DepKN = (nk * P * K0 * r0) / (1 + gss);
+double piG = P * SCG - w * Lab - ibk * LCG / (1 + gss);
+double piN = piG + (gss * ucf * INV) / (1 + gss) - DepKN;
+double piDF = gss * (LCG - DCG) / (1 + gss) + piG - tau2 * piN - P * ICG;
+
+// Begin BLOCK for 22
+double piB = 1e04;
+double BH = 1e04;
+double BB = 5e03;
+double tau1 = .3;
+double alpha2 = .05;
+double VH = 1e04;
+double DH = 1e03;
+double piDB = 1e03;
+
+for (i = 0; i < 1e05; i++) {
+  // NOTE: Store old updates
+  double piB0 = piB;
+  double piDB0 = piDB;
+  double DH0 = DH;
+  double BH0 = BH;
+  double BB0 = BB;
+  double tau10 = tau1;
+  double VH0 = VH;
+  double alpha20 = alpha2;
+
+  // NOTE: restore errors
+  double err = 0;
+
+  // NOTE: Writing the system
+  piB = (ibk * LCG + baserate * BB) / (1 + gss);
+  piDB = etab * (1 - tau2) * piB;
+  BH = VH - DH;
+  BB = BG - BH;
+  DH = betaH * VH;
+  tau1 = (P * G - tau2 * (piB + piN) - BG * (gss - baserate) / (1 + gss)) /
+         (w * Lab + piDF + piDB + baserate * BH / (1 + gss));
+  VH = ((1 - alpha1) * (1 - tau1) * w * Lab +
+        (1 - tau1) * (piDF + piDB + baserate * BH / (1 + gss))) *
+       (1 + gss) / (gss + alpha2);
+  alpha2 = (P * C - alpha1 * (1 - tau1) * w * Lab) * (1 + gss) / VH;
+
+  err += fabs(piB0 - piB);
+  err += fabs(piDB0 - piDB);
+  err += fabs(DH0 - DH);
+  err += fabs(BH0 - BH);
+  err += fabs(BB0 - BB);
+  err += fabs(tau10 - tau1);
+  err += fabs(VH0 - VH);
+  err += fabs(alpha20 - alpha2);
+
+  if (err < tol) {
+    break;
+  }
+}
+// END BLOCK for 22
+
+double nwB = ((1 - tau2) * piB - piDB) * (1 + gss) / (gss);
+double etaf = piDF / ((1 - tau2) * piN);
 
 exp_data(V("gk0"), scriptLocation, rSave, "gk");
 exp_data(V("inf0"), scriptLocation, rSave, "inf");
@@ -106,52 +224,41 @@ exp_data(V("alpha1"), scriptLocation, rSave, "alpha1");
 // call R script in system
 std::system(fullCommand.c_str());
 
-double gss = imp_data("gss", scriptLocation, rSave);
-
-double INV = imp_data("INV", scriptLocation, rSave);
 double inv = INV / ncg;
-double uD = imp_data("uT", scriptLocation, rSave);
-double SCG = imp_data("S", scriptLocation, rSave);
+double uD = uT;
 double scg = SCG / ncg;
-double LCG = imp_data("L", scriptLocation, rSave);
 double lcg = LCG / ncg;
-double pC = imp_data("P", scriptLocation, rSave);
+double pC = P;
 double nSCG = pC * SCG;
 double nscg = nSCG / ncg;
-double DCG = imp_data("Df", scriptLocation, rSave);
 double dcg = DCG / ncg;
 double ms = 1 / ncg;
-double w = imp_data("w", scriptLocation, rSave);
-double ACG = imp_data("A", scriptLocation, rSave);
 double ulc = w / ACG;
-double etaf = imp_data("etaf", scriptLocation, rSave);
+/* double etaf = imp_data("etaf", scriptLocation, rSave); */
 double k0 = K0 / ncg;
 double WB = w * Lab;
 double wb = WB / ncg;
 double CF = nSCG - WB;
 double cf = nscg - wb;
 
-double BG = imp_data("B", scriptLocation, rSave);
+/* double BH = imp_data("Bh", scriptLocation, rSave); */
+/* double DH = imp_data("Dh", scriptLocation, rSave); */
+/* double VH = imp_data("V", scriptLocation, rSave); */
+/* double alpha2 = imp_data("alpha2", scriptLocation, rSave); */
 
-double BH = imp_data("Bh", scriptLocation, rSave);
-double DH = imp_data("Dh", scriptLocation, rSave);
-double VH = imp_data("V", scriptLocation, rSave);
-double alpha2 = imp_data("alpha2", scriptLocation, rSave);
-
-double spread = imp_data("spread", scriptLocation, rSave);
 double nB = V("nBanks");
-double nwB = imp_data("nwB", scriptLocation, rSave);
+/* double nwB = imp_data("nwB", scriptLocation, rSave); */
 double nwb = nwB / nB;
 double LB = LCG;
 double lb = LB / nB;
-double BB = imp_data("Bb", scriptLocation, rSave);
+/* double BB = imp_data("Bb", scriptLocation, rSave); */
 double bb = BB / nB;
 double DB = DCG + DH;
 double db = DB / nB;
 double icb = VS(CBK, "BaseInterestRate");
 double rb = icb + spread;
 
-double tau1 = imp_data("tau1", scriptLocation, rSave);
+/* double tau1 = imp_data("tau1", scriptLocation, rSave); */
 
 // Create capital vintage and loans outstanding objects.
 ADDNOBJS(CG, "CapitalVintage", kappa - 1);   // add capital vintage objects
