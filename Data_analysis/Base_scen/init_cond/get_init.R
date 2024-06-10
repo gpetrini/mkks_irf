@@ -128,9 +128,12 @@ print( output )
 # 
 # save( parameters, file = paste0( folder, 'parameterSet.RData' ) )
 
-# remove input parameters
-for( i in 1 : length( tmpFiles ) ){
-  file.remove( paste0( folder, tmpFiles[ i ] ) )
-}
+
+print(
+  sfcr_get_blocks(sim) %>%
+  as.data.frame()
+)
 
 cat( "\nR code successfully run...")
+
+
