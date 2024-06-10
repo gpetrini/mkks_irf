@@ -14,31 +14,6 @@ Technical variable to initialise the firms and some initial conditions.
 It is computed only once in the beginning of the simulation.
 Must be the first variable in the list in model's setup.
 */
-std::string callFile = std::string(CONFIG);
-std::string pPath = std::string(PATH);
-std::string rPath = "/init_cond/";
-
-// for some reason, when running in parallel, CONFIG macro returns the complete
-// address of the configuration file in this case, this chunk of the code
-// removes the address from the string, include a dot in rPath address and also
-// rewrite pPath.
-std::size_t found = callFile.find_last_of("/\\");
-
-if (found != string::npos) {
-  pPath = callFile.substr(0, found);
-  callFile = callFile.substr(found + 1);
-  std::string rPath = "./init_cond/";
-}
-std::string scriptLocation = pPath + rPath;
-std::string addressScript = scriptLocation + "get_init.R";
-std::string rSave = callFile;
-std::string fullCommand =
-    "Rscript " + addressScript + " " + rSave + " " + scriptLocation;
-PLOG("\nCommand sent to system was: ");
-PLOG(fullCommand.c_str());
-
-// access values of parameters to feed into r and get the steady state values.
-
 // NOTE: Keeping the same curs
 // NOTE: Trying to make it prepared ofr NO_SEARCH flag
 ECO = cur6 = SEARCHS(ROOT, "Countries");
@@ -196,9 +171,6 @@ for (i = 0; i < 1e05; i++) {
 
 double nwB = ((1 - tau2) * piB - piDB) * (1 + gss) / (gss);
 double etaf = piDF / ((1 - tau2) * piN);
-
-// call R script in system
-std::system(fullCommand.c_str());
 
 double inv = INV / ncg;
 double uD = uT;
