@@ -234,31 +234,21 @@ double nscg = nSCG / ncg;
 double dcg = DCG / ncg;
 double ms = 1 / ncg;
 double ulc = w / ACG;
-/* double etaf = imp_data("etaf", scriptLocation, rSave); */
 double k0 = K0 / ncg;
 double WB = w * Lab;
 double wb = WB / ncg;
 double CF = nSCG - WB;
 double cf = nscg - wb;
 
-/* double BH = imp_data("Bh", scriptLocation, rSave); */
-/* double DH = imp_data("Dh", scriptLocation, rSave); */
-/* double VH = imp_data("V", scriptLocation, rSave); */
-/* double alpha2 = imp_data("alpha2", scriptLocation, rSave); */
-
 double nB = V("nBanks");
-/* double nwB = imp_data("nwB", scriptLocation, rSave); */
 double nwb = nwB / nB;
 double LB = LCG;
 double lb = LB / nB;
-/* double BB = imp_data("Bb", scriptLocation, rSave); */
 double bb = BB / nB;
 double DB = DCG + DH;
 double db = DB / nB;
 double icb = VS(CBK, "BaseInterestRate");
 double rb = icb + spread;
-
-/* double tau1 = imp_data("tau1", scriptLocation, rSave); */
 
 // Create capital vintage and loans outstanding objects.
 ADDNOBJS(CG, "CapitalVintage", kappa - 1);   // add capital vintage objects
