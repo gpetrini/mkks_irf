@@ -6,13 +6,18 @@
 This fork implements State-depended IRF as described by [cite/t:@amendola_2024_linear].
 Also implements a few refinementes, such as:
 
--
+- Endogenously solve the system for the initial conditions. Steps:
+  - Generate the equations blocks using =sfcr_get_blocks= function
+  - Based on that, start rewriting the system in that order
+  - Use the Gauss-Seidel Method for the simultaneous blocks
+    - Since the solution was already produced by R, initial guesses are close in magnitude to the solution of the system
 
 * Breaking changes
 
 - git is not tracking some file extension that are either machine-specific (such as *.o) or that bloats the .git folder
 - The initialization is not-longer waiting for number_banks > 1
   - This is done in MKKS-2.0
+- Does not run the Rscript
 
 * Technical changes
 
