@@ -197,30 +197,6 @@ for (i = 0; i < 1e05; i++) {
 double nwB = ((1 - tau2) * piB - piDB) * (1 + gss) / (gss);
 double etaf = piDF / ((1 - tau2) * piN);
 
-exp_data(V("gk0"), scriptLocation, rSave, "gk");
-exp_data(V("inf0"), scriptLocation, rSave, "inf");
-exp_data(V("u0"), scriptLocation, rSave, "u");
-exp_data(V("K0"), scriptLocation, rSave, "K");
-exp_data(V("nu"), scriptLocation, rSave, "nu");
-exp_data(V("Nf0"), scriptLocation, rSave, "Nf");
-exp_data(V("gamma"), scriptLocation, rSave, "gamma");
-exp_data(V("iota"), scriptLocation, rSave, "iota");
-exp_data(V("h0"), scriptLocation, rSave, "h");
-exp_data(V("Gamma0"), scriptLocation, rSave, "Gamma0");
-exp_data(V("lev0"), scriptLocation, rSave, "lev");
-exp_data(V("Assets0"), scriptLocation, rSave, "Assets");
-exp_data(V("r0"), scriptLocation, rSave, "r");
-exp_data(VL("Markup", 1), scriptLocation, rSave, "theta");
-exp_data(V("nk0"), scriptLocation, rSave, "nk");
-exp_data(V("ibk0"), scriptLocation, rSave, "ibk");
-exp_data(V("lambda"), scriptLocation, rSave, "lambda");
-exp_data(V("tau2"), scriptLocation, rSave, "tau2");
-exp_data(V("BaseInterestRate"), scriptLocation, rSave, "i");
-exp_data(V("etab"), scriptLocation, rSave, "etab");
-exp_data(V("gDebtGDP0"), scriptLocation, rSave, "gDebtGDP");
-exp_data(V("beta"), scriptLocation, rSave, "beta");
-exp_data(V("alpha1"), scriptLocation, rSave, "alpha1");
-
 // call R script in system
 std::system(fullCommand.c_str());
 
