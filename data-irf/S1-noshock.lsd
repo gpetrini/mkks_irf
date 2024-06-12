@@ -281,6 +281,7 @@ Label Root
 			Var: BaseInterestRate
 			Param: fullShock
 			Param: rhoShock
+			Param: InitialInterestRate
 
 		}
 
@@ -893,9 +894,10 @@ Var: TaxToGDP 0 n + n n
 Var: TotalTaxRevenues 0 n + n n
 
 Object: CentralBank C	1
-Var: BaseInterestRate 1 n + n n	0.025
+Var: BaseInterestRate 1 s + n n	0.025
 Param: fullShock 0 n + n n	0.01
 Param: rhoShock 0 n + n n	0.05
+Param: InitialInterestRate 0 n + n n	0.025
 
 SIM_NUM 1
 SEED 1
@@ -2990,6 +2992,12 @@ Parameter_rhoShock
 
 _INIT_
 All 1 instances equal to 0.05
+END_DESCRIPTION
+
+Parameter_InitialInterestRate
+
+_INIT_
+All 1 instances equal to 0.025
 END_DESCRIPTION
 
 

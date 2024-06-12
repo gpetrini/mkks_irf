@@ -955,3 +955,38 @@ command returned bad code: 2
 Message:
 command returned bad code: 2
 -----
+
+(06/12/24 21:55:38)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+(06/12/24 21:55:41)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+(06/12/24 21:57:14)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+
+====================> NEW TCL SESSION
+
+(06/12/24 22:10:24)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
