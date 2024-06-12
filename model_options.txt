@@ -1,5 +1,5 @@
 TARGET=lsd
 FUN=fun_model_jeec
-FUN_EXTRA=jeec_initialisation.h jeec_aggregate.h jeec_banks.h jeec_firms_capital.h jeec_firms_financial.h jeec_firms_rd.h jeec_government.h jeec_households.h jeec_firms_production.h jeec_demand_distribution.h jeec_labour_market.h jeec_entry_exit.h jeec_checks.h jeec_save.h
+FUN_EXTRA=jeec_initialisation.h jeec_aggregate.h jeec_banks.h jeec_firms_capital.h jeec_firms_financial.h jeec_firms_rd.h jeec_government.h jeec_households.h jeec_firms_production.h jeec_demand_distribution.h jeec_labour_market.h jeec_entry_exit.h jeec_checks.h jeec_save.h central_bank.h
 SWITCH_CC=-O3 -ggdb3
 SWITCH_CC_LNK=
