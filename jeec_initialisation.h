@@ -43,7 +43,7 @@ double nk = VS(ROOT, "nk0");
 double ibk = VS(ROOT, "ibk0");
 double lambda = v[1] = VS(SEC, "lambda");
 double tau2 = VS(ECO, "tau2");
-double baserate = VS(CBK, "BaseInterestRate");
+double baserate = VS(CBK, "InitialInterestRate");
 double etab = VS(BNK, "etab");
 double gDebtGDP = VS(ROOT, "gDebtGDP0");
 double betaH = VS(ECO, "beta");
