@@ -9,8 +9,8 @@ MKKS-IRF
 #
 645x474+656+284
 #
-Data_analysis/Base_scen/S1.lsd
+data-irf/S1.lsd
 CentralBank
 1
-0
+2
 0.0
