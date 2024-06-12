@@ -76,6 +76,8 @@ MODELBEGIN
 
 #include "jeec_initialisation.h" // Model inicialisation
 
+#include "central_bank.h" // Monetary policy shock
+
 #include "jeec_aggregate.h" // Equations for aggregate data
 
 #include "jeec_banks.h" // Equations for banks
