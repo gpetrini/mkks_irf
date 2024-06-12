@@ -223,6 +223,9 @@ WRITES(SEC, "initialMarkup", thetal);
 
 WRITELLS(GOV, "GovernmentDebt", BG, 0, 1);
 
+WRITELLS(CBK, "BaseInterestRate", baserate, 0, 1);
+WRITES(CBK, "BaseInterestRate", baserate);
+
 WRITELLS(HHS, "HouseholdDeposits", DH, 0, 1);
 WRITELLS(HHS, "HouseholdWealth", VH, 0, 1);
 WRITELLS(HHS, "HouseholdBills", BH, 0, 1);
