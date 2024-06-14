@@ -19,12 +19,12 @@ EQUATION("PlannedExpansionInvestment")
 Expansion investment - equation 11 of the paper.
 Level: firm.
 */
-v[0] = VS(PARENT, "gamma0");
-v[1] = VS(PARENT, "gammau");
+v[0] = VS(SEC, "gamma0");
+v[1] = VS(SEC, "gammau");
 v[2] = V("DesiredCapacityUtilisation");
-v[3] = VS(PARENT, "normalCapacity");
+v[3] = VS(SEC, "normalCapacity");
 v[4] = V("AvailableCapitalStock");
-v[5] = VS(PARENT, "maxGrowthCapacity");
+v[5] = VS(SEC, "maxGrowthCapacity");
 v[6] = v[0] + v[1] * (v[2] - v[3]); // Desired growth rate of capital stock
 if (v[6] < 0) // Expansionary investment cannot be negative
 {
@@ -71,7 +71,7 @@ if (t == 1) // workaround to update first instance's of capital vintage object.
   }
 }
 
-v[0] = VS(PARENT,
+v[0] = VS(SEC,
           "payback"); // Number of periods of payback of replacement investments
 v[1] = V("ExpectedPrice"); // Expected price
 v[2] = 0;                  // Initialise counter of total replacement investment
@@ -194,7 +194,7 @@ EQUATION("UnitCostVintage")
 Unit cost of existing vintage of capital. Used in the evaluation of replacement
 investment. Level: capital vitange.
 */
-v[0] = VS(GRANDPARENT->up, "NominalWage");
+v[0] = VS(ECO, "NominalWage");
 v[1] = V("VintageProductivity");
 v[2] = v[1] > 0 ? v[0] / v[1] : VS(PARENT, "NewMachineUnitCost");
 RESULT(v[2])
@@ -204,7 +204,7 @@ EQUATION("NewMachineUnitCost")
 Unit cost of prospective new vintage of capital. Used in the evaluation of
 replacement investment. Level: firm.
 */
-v[0] = VS(GRANDPARENT, "NominalWage");
+v[0] = VS(ECO, "NominalWage");
 v[1] = VL("ACurrent", 1);
 v[2] = v[0] / v[1];
 RESULT(v[2])
@@ -214,7 +214,7 @@ EQUATION("PaybackReplacementVintage")
 Number of periods that the replacement of a particular vintage of capital would
 yield. Level: capital vintage.
 */
-v[0] = VS(GRANDPARENT, "ExpectedPrice");
+v[0] = VS(SEC, "ExpectedPrice");
 v[1] = VS(PARENT, "NewMachineUnitCost");
 v[2] = V("UnitCostVintage");
 v[3] = v[2] - v[1]; // difference of unit cost between old and new vintage
@@ -244,7 +244,7 @@ AvgLabourProductivityUpdate. Case 1 (flagProductivity = 1): firms use first
 newest vintages Case 2 (default, flagProductivity = 0): firms use all vintages
 in the same proportion Level: firm
 */
-v[0] = VS(root, "flagProductivity");
+v[0] = VS(ROOT, "flagProductivity");
 v[1] = V("DesiredCapacityUtilisation");
 v[2] = V("AvailableCapitalStock");
 v[3] = v[1] * v[2];         // total capital to be used (subtractions below)
@@ -300,7 +300,7 @@ Actual labour productivity of a firm.
 Level: firm.
 */
 
-if (VS(root, "flagProductivity") ==
+if (VS(ROOT, "flagProductivity") ==
     0) // are all capital vintages used proportionally?
   END_EQUATION(V("ExAnteAvgLabourProductivity")) // yes, ex-post average labour
                                                  // productivity is unchanged
@@ -372,16 +372,17 @@ EQUATION("CapitalShare")
 Return firms' share of capital within the sector
 Level: firm
 */
-v[0] = VS(PARENT, "SectorCapital");
+v[0] = VS(SEC, "SectorCapital");
 v[1] = V("AvailableCapitalStock");
-v[2] = v[1] / v[0] RESULT(v[2])
+v[2] = v[1] / v[0];
+RESULT(v[2])
 
-                  EQUATION("SectorCapital")
-       /*
-       Return total stock of capital
-       Level: sector
-       */
-       v[0] = SUM("AvailableCapitalStock");
+EQUATION("SectorCapital")
+/*
+Return total stock of capital
+Level: sector
+*/
+v[0] = SUM("AvailableCapitalStock");
 RESULT(v[0])
 
 EQUATION("EmbedCapacity")
@@ -402,7 +403,7 @@ WRITES(cur, "Replace", 0);
 v[2] = V("ACurrent");
 WRITES(cur, "VintageProductivity", v[2]);
 WRITES(cur, "scrapTime", t + v[1]);
-v[3] = VS(GRANDPARENT, "PriceLevel");
+v[3] = VS(ECO, "PriceLevel");
 WRITES(cur, "VintagePrice", v[3]);
 RESULT(0)
 
@@ -501,7 +502,7 @@ Nominal investment in machines & equipment.
 Level: firm.
 */
 v[0] = V("ActualInvestment");
-v[1] = V("PriceLevel");
+v[1] = VS(ECO, "PriceLevel");
 RESULT(v[0] * v[1])
 
 EQUATION_DUMMY("RealDepreciation", "CapitalDepreciation")
