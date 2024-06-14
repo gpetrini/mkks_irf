@@ -22,7 +22,7 @@ Banks set interest rate to a particular firm.
 Case 0: interest rate is the same for all firms (base interest rate + a markup)
 Case 1: interest rate depends on the debt servicing to operating cash flow ratio
 */
-if (V("flagVariableBankInterestRate")) {
+if (VS(ROOT, "flagVariableBankInterestRate")) {
   v[0] = V("mu");
   v[1] = V("DebtServicingRatio");
   v[2] = V("BaseInterestRate");
@@ -86,21 +86,14 @@ EQUATION("LoanShare")
 Compute the market share of banks, as % of total loans.
 */
 v[0] = V("LoanPortfolio");
-v[1] = VS(PARENT, "AggregateDebtFirms");
+v[1] = VS(ECO, "AggregateDebtFirms");
 v[2] = v[1] != 0 ? v[0] / v[1] : 0;
 RESULT(v[2])
 
 EQUATION("updateProbDrawBank")
 /*Update the probability that a bank is drawn by the firms.
 Only relevant when there is credit rationing.*/
-CYCLE(cur, "Banks") // cycle in firms within the sector
-{
-  v[0] = VLS(cur, "LoanShare", 1) != 0 ? VLS(cur, "LoanShare", 1)
-                                       : 1; // get asset share
-  WRITES(cur, "probDrawBank",
-         v[0]); // probability of being chosen depends on the market share
-}
-RESULT(0)
+RESULT(1)
 
 EQUATION("AmortisationFlow")
 /*
@@ -133,13 +126,11 @@ assumption of no default there is no default.
 */
 v[0] = 0;
 v[1] = V("idBank");
-CYCLES(PARENT, cur, "Sectors") {
-  CYCLES(cur, cur1, "Firms") {
-    CYCLES(cur1, cur2, "OutstandingLoan") {
-      v[2] = VS(cur2, "BankSupplierID");
-      if (v[2] == v[1])
-        v[0] += VS(cur2, "AmortisationSchedule");
-    }
+CYCLES(SEC, cur1, "Firms") {
+  CYCLES(cur1, cur2, "OutstandingLoan") {
+    v[2] = VS(cur2, "BankSupplierID");
+    if (v[2] == v[1])
+      v[0] += VS(cur2, "AmortisationSchedule");
   }
 }
 RESULT(v[0])
@@ -197,7 +188,7 @@ EQUATION("BankTax")
 /*
 Calculate bank's tax due.
 */
-v[0] = VS(PARENT, "tau2");
+v[0] = VS(ECO, "tau2");
 v[1] = V("BankTaxableIncome");
 v[2] = v[0] * v[1];
 v[3] = max(v[2], 0);
@@ -240,13 +231,7 @@ v[1] = VL("DepositsBank", 1);
 RESULT(v[0] - v[1])
 
 EQUATION("BankCreditSupply")
-v[0] = 0;           // initialise the counter of outstanding loans
-v[1] = V("idBank"); // bank ID
-for (i = 0; i < COUNT_HOOK; i++) {
-  if (HOOK(i) != NULL) {
-    v[0] += VS(HOOK(i), "CreditSupply");
-  }
-}
+v[0] = SUMS(SEC, "CreditSupply");
 RESULT(v[0])
 
 EQUATION("BankAssets")
