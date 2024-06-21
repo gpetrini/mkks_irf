@@ -221,7 +221,7 @@ Level: firm (for ease of data access).
 cur1 = SHOOK == NULL ? SEARCH_CND("idBank", V("BankSupplierID"))
                      : SHOOK; // gather bank data
 v[0] = V("InterestAgreedBank");
-v[1] = VLS(BNK, "AverageBankInterestRate", 1);
+v[1] = VLS(BNK, "AverageBankInterestRate", 1); // FIXME: USE MAVE instead?
 v[2] = VS(SEC, "lambda");
 v[3] = 50;    // max iterations
 v[4] = 0;     // initialise iteration count
