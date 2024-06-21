@@ -917,7 +917,7 @@ Param: cb_sensib_inflation 0 n + n n	0.5
 Param: cb_sensib_capacity 0 n + n n	0.3
 Param: cb_sensib_leverage 0 n + n n	-0.3
 
-SIM_NUM 1
+SIM_NUM 600
 SEED 1
 MAX_STEP 520
 EQUATION fun_model_jeec.cpp
