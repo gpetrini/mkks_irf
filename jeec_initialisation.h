@@ -225,6 +225,7 @@ WRITELLS(GOV, "GovernmentDebt", BG, 0, 1);
 
 WRITELLS(CBK, "BaseInterestRate", baserate, 0, 1);
 WRITES(CBK, "BaseInterestRate", baserate);
+WRITES(CBK, "nominal_target_rate", baserate);
 
 WRITELLS(HHS, "HouseholdDeposits", DH, 0, 1);
 WRITELLS(HHS, "HouseholdWealth", VH, 0, 1);
@@ -239,7 +240,12 @@ WRITELLS(BNK, "DepositsBank", db, 0, 1);
 WRITELLS(BNK, "AverageBankInterestRate", rb, 0, 1);
 
 WRITELS(ECO, "AggregateDebtFirms", LCG, 0);
+WRITELLS(ECO, "AggregateLeverage", Lev, 0, 1);
 WRITELLS(ECO, "Inflation", infla, 0, 1);
+// NOTE: For MAVE
+WRITELLS(ECO, "Inflation", infla, 0, 2);
+WRITELLS(ECO, "Inflation", infla, 0, 3);
+WRITELLS(ECO, "Inflation", infla, 0, 4);
 WRITELLS(ECO, "NominalWage", w, 0, 1);
 WRITELLS(ECO, "PriceLevel", pC, 0, 1);
 WRITELLS(ECO, "AggregateCapitalStock", K0, 0, 1);
