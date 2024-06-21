@@ -1,0 +1,924 @@
+	
+Label Root
+{
+	Son: Countries
+	Label Countries
+	{
+		Son: Households
+		Label Households
+		{
+			Var: CapitalContribution
+			Var: Consumption
+			Var: HouseholdBills
+			Var: HouseholdDeposits
+			Var: HouseholdDisposableIncome
+			Var: HouseholdWealth
+			Var: NominalConsumption
+			Var: TaxHousehold
+			Var: TotalIncomeHousehold
+			Param: alpha1
+			Param: alpha2
+
+		}
+
+		Son: Sectors
+		Label Sectors
+		{
+			Son: Firms
+			Label Firms
+			{
+				Son: CapitalVintage
+				Label CapitalVintage
+				{
+					Var: AgeVintage
+					Var: CapitalQuantity
+					Var: PaybackReplacementVintage
+					Param: QuantityDepreciation
+					Param: QuantityReplace
+					Param: Replace
+					Var: UnitCostVintage
+					Param: VintagePrice
+					Param: VintageProductivity
+					Param: VintageTime
+					Param: scrapTime
+					Param: RevisedByShrinkCapacity
+
+				}
+
+				Son: OutstandingLoan
+				Label OutstandingLoan
+				{
+					Var: LoanOutstanding
+					Param: BankSupplierID
+					Param: AmortisationSchedule
+					Param: PeriodsRemaining
+					Param: InterestSchedule
+					Param: LoanInterestRate
+
+				}
+
+				Var: ACurrent
+				Var: ActualInvestment
+				Var: Amortisation
+				Var: AvailableCapitalStock
+				Var: AverageInterestRate
+				Var: AvgLabourProductivity
+				Param: BankID
+				Var: CapacityUtilisation
+				Var: CapitalDepreciation
+				Var: CapitalShare
+				Var: CapitalVintageHousekeeping
+				Var: Competitiveness
+				Var: CreateOutstandingLoan
+				Var: CreditSupply
+				Var: DebtServicing
+				Var: DebtServicingToOperatingCashFlowRatio
+				Var: DebtToSalesRatio
+				Var: DefaultFlag
+				Func: DefineCreditLimit
+				Var: DemandLoans
+				Param: DemandLoansForBankRiskEvaluation
+				Var: DesiredCapacityUtilisation
+				Var: DesiredDemandLabour
+				Var: DesiredProduction
+				Var: DividendPayoutRatio
+				Func: DrawABank
+				Var: EffectiveDemandLabour
+				Var: EmbedCapacity
+				Param: EntryTime
+				Var: ExAnteAvgLabourProductivity
+				Var: ExpansionInvestment
+				Var: ExpectedOperatingCashFlow
+				Var: ExpectedReturnOfLoanProject
+				Var: ExpectedSales
+				Var: ExpectedWageBill
+				Var: FirmAssets
+				Var: FirmDefault
+				Var: FirmDemand
+				Var: FirmDeposits
+				Var: FirmDeposits_PostCreditUpdate
+				Var: FirmDeposits_PostDividendsUpdate
+				Var: FirmDeposits_PostProductionUpdate
+				Var: FirmDeposits_PostSalesUpdate
+				Var: FirmDeposits_PostTaxesUpdate
+				Var: FirmDividends
+				Var: FirmProductivityGrowth
+				Func: FunctionReplacementInvestment
+				Var: FundsExpansionInvestment
+				Var: FundsReplacementInvestment
+				Var: GrossProfits
+				Var: HedgeFirmFlag
+				Var: Imitation
+				Var: ImitationWorkers
+				Var: Innovation
+				Var: InnovationWorkers
+				Var: InterestAgreedBank
+				Var: InterestPayment
+				Var: Inventory
+				Var: InventoryRevaluation
+				Var: Leverage
+				Var: MarketShare
+				Var: Markup
+				Var: MinskianFirm
+				Var: NetProfits
+				Var: NewMachineUnitCost
+				Var: NominalCapitalStock
+				Var: NominalDepreciation
+				Var: NominalInvestment
+				Var: NominalSales
+				Var: OperatingCashFlow
+				Var: PlannedExpansionInvestment
+				Var: PlannedInvestment
+				Var: PlannedReplacementInvestment
+				Var: PonziFirmFlag
+				Var: Price
+				Var: ProbabilityOfDefault
+				Var: Production
+				Var: ProductionWorkers
+				Var: RDExpenditure
+				Var: RealCapitalStock
+				Var: RealDepreciation
+				Var: ReplacementInvestment
+				Var: Sales
+				Var: ShrinkCapacity
+				Var: SpeculativeFirmFlag
+				Var: TaxFirm
+				Var: TotalDebt
+				Var: UnconstrainedReplacementInvestment
+				Var: UndistributedProfits
+				Var: UnfilledDemand
+				Var: UnitCost
+				Var: WageBill
+				Var: WorkersFirm
+				Var: WorkersRD
+				Var: __A
+				Var: __Assets
+				Var: __CashF
+				Var: __I
+				Var: __K
+				Var: __KN
+				Var: __Lev
+				Var: __Lf
+				Var: __Minskian
+				Var: __ProfitRate
+				Var: __WeiItoK
+				Var: __int
+				Param: flagExit
+				Param: idFirm
+				Param: marketShareEntry
+				Param: maximumReplacementInvestmentNominal
+				Param: maximumReplacementInvestmentReal
+				Param: probImitation
+				Var: WorkingCapitalLoanDemand
+
+			}
+
+			Var: AverageCompetitiveness
+			Var: AveragePriceForCompetitiveness
+			Var: AverageUnfilledDemandForCompetitiveness
+			Var: CheckMarketShare
+			Var: Entry
+			Var: ExpectedPrice
+			Var: NearZeroMarketShare
+			Var: NumberOfEntrants
+			Func: RebaseMarketShare
+			Var: RevisionSales
+			Var: SectorCapital
+			Var: TechnologicalFrontier
+			Var: TotalUnfilledDemand
+			Var: UnitsOfLabour
+			Param: betaDist1
+			Param: betaDist2
+			Param: betaEntry1
+			Param: betaEntry2
+			Param: betaMax
+			Param: betaMin
+			Param: bottomBoundSizeEntry
+			Param: chi
+			Param: etaf
+			Param: gamma0
+			Param: gammau
+			Param: idSector
+			Param: initialMarkup
+			Param: iota
+			Param: kappa
+			Param: lambda
+			Param: maxGrowthCapacity
+			Param: maxInvestmentRatio
+			Param: maxReplacementInvestment
+			Param: minimumMarketShareTolerance
+			Param: n
+			Param: normalCapacity
+			Param: nu
+			Param: omega1
+			Param: omega2
+			Param: payback
+			Param: zeta1
+			Param: zeta2
+			Param: topBoundSizeEntry
+			Param: upsilon
+			Param: xi
+			Param: etaf1
+			Param: varepsilon
+
+		}
+
+		Son: Banks
+		Label Banks
+		{
+			Var: AmortisationDue
+			Var: AmortisationFlow
+			Var: AverageBankInterestRate
+			Var: BankAssets
+			Var: BankCreditSupply
+			Var: BankDividends
+			Var: BankGrossProfits
+			Var: BankTax
+			Var: BankTaxableIncome
+			Var: BillsBank
+			Var: ChangeBillsBank
+			Var: ChangeDepositsBank
+			Var: ChangeLoanPortfolio
+			Param: DebtServicingRatio
+			Var: DefaultLoans
+			Var: DepositsBank
+			Var: DepositsFromFirms
+			Var: InterestIncome
+			Func: InterestRateBank
+			Var: LoanPortfolio
+			Var: LoanShare
+			Var: NetWorthBank
+			Var: NonPerformingLoans
+			Var: UndistributedProfitsBank
+			Param: etab
+			Param: idBank
+			Param: interestSpread
+			Param: mu
+			Param: probDrawBank
+
+		}
+
+		Son: Government
+		Label Government
+		{
+			Var: ChangeGovernmentDebt
+			Param: Gamma0
+			Param: Gamma1
+			Var: GovernmentConsumption
+			Var: GovernmentDebt
+			Var: GovernmentDebtToGDP
+			Var: InterestGovernmentDebt
+			Var: NominalDeficitGovernment
+			Var: NominalGovernmentConsumption
+			Var: TaxToGDP
+			Var: TotalTaxRevenues
+
+		}
+
+		Son: CentralBank
+		Label CentralBank
+		{
+			Var: BaseInterestRate
+			Param: fullShock
+			Param: rhoShock
+			Param: InitialInterestRate
+			Param: target_inflation
+			Var: rShock
+			Param: nominal_target_rate
+			Param: interest_adjustment_step
+			Param: target_capacity
+			Param: target_leverage
+			Param: cb_sensib_inflation
+			Param: cb_sensib_capacity
+			Param: cb_sensib_leverage
+
+		}
+
+		Var: Agg_NominalSales
+		Var: Agg_RealSales
+		Var: AggregateAssetsFirms
+		Var: AggregateCapacityUtilisation
+		Var: AggregateCapitalStock
+		Var: AggregateConsumption
+		Var: AggregateDebtAmortisation
+		Var: AggregateDebtFirms
+		Var: AggregateDemand
+		Var: AggregateDepreciation
+		Var: AggregateDividendPayoutRatioFirms
+		Var: AggregateDividendsBanks
+		Var: AggregateDividendsFirms
+		Var: AggregateFirmDeposits
+		Var: AggregateGrowthProductivity
+		Var: AggregateInventories
+		Var: AggregateInvestment
+		Var: AggregateLeverage
+		Var: AggregateNewLoans
+		Var: AggregateNominalCapital
+		Var: AggregateNominalConsumption
+		Var: AggregateNominalDepreciation
+		Var: AggregateNominalInvestment
+		Var: AggregateNonPerformingLoans
+		Var: AggregateProduction
+		Var: AggregateProductivity
+		Var: AggregateProfitRate
+		Var: AggregateProfits
+		Var: AggregateSavingFirms
+		Var: AggregateSupply
+		Var: AggregateWageBill
+		Var: AverageInterestPayment
+		Var: AverageMarkup
+		Var: BottomBinaryEmploymentGrowth
+		Var: ChangeBillsBanksSector
+		Var: ChangeBillsHouseholdsSector
+		Var: ChangeDebtFirmsSector
+		Var: ChangeDepositsBanksSector
+		Var: ChangeDepositsFirmsSector
+		Var: ChangeDepositsHouseholdsSector
+		Var: ChangeLoanPortfolioBanksSector
+		Var: CheckBudgetConstraintBanksSector
+		Var: CheckBudgetConstraintFirmsSector
+		Var: CheckBudgetConstraintGovernmentSector
+		Var: CheckBudgetConstraintHouseholdsSector
+		Var: CheckCapitalStock
+		Var: CheckFinancialSavings
+		Var: CheckFirmsDebt
+		Var: CheckGovernmentDebt
+		Var: CheckInventory
+		Var: CheckNominalSalesDemand
+		Var: CheckOutputDemandSupply
+		Var: CheckRealSalesDemand
+		Var: CheckSupplyDemand
+		Var: Exit
+		Var: FinancialFragilityIndex
+		Var: FinancialSavingsBankingSector
+		Var: FinancialSavingsBankingSector_GDP
+		Var: FinancialSavingsFirmsSector
+		Var: FinancialSavingsFirmsSector_GDP
+		Var: FinancialSavingsGovermentSector
+		Var: FinancialSavingsGovermentSector_GDP
+		Var: FinancialSavingsHouseholdsSector
+		Var: FinancialSavingsHouseholds_GDP
+		Var: GovernmentDebtToGDPRatio
+		Var: GrowthNominalWage
+		Var: GrowthRateCapitalStock
+		Var: GrowthRateEmployment
+		Var: GrowthRateMaxProductivity
+		Var: HouseholdsWealthGDP
+		Var: IncidenceHedgeFinancing
+		Var: IncidencePonziFinancing
+		Var: IncidenceSpeculativeFinancing
+		Var: Inflation
+		Var: InvToCapitalRatio
+		Var: InvToGDPRatio
+		Var: NominalGDP_Demand
+		Var: NominalWage
+		Var: PriceLevel
+		Var: ProfitDebtDistributionIndex
+		Var: RealGDP_Demand
+		Var: ReplacementInvToCapitalRatio
+		Var: StochasticComponentGrowthNominalWage
+		Var: TotalLabour
+		Var: UpperBinaryEmploymentGrowth
+		Var: WeightedIncidenceHedgeFinancing
+		Var: WeightedIncidencePonziFinancing
+		Var: WeightedIncidenceSpeculativeFinancing
+		Var: _A
+		Var: _AssetsF
+		Var: _BtoY
+		Var: _C
+		Var: _DF
+		Var: _FFI
+		Var: _G
+		Var: _I
+		Var: _Inv
+		Var: _K
+		Var: _KN
+		Var: _L
+		Var: _Lev
+		Var: _LumH
+		Var: _LumL
+		Var: _Markup
+		Var: _MedA
+		Var: _MinA
+		Var: _Minskian
+		Var: _N
+		Var: _NI
+		Var: _P
+		Var: _PDIndex
+		Var: _ProfitRate
+		Var: _Profits
+		Var: _SN
+		Var: _SavbToY
+		Var: _SavfToY
+		Var: _SavgToY
+		Var: _SavhToY
+		Var: _Tax
+		Var: _UnwHedge
+		Var: _UnwPonzi
+		Var: _UnwSpec
+		Var: _VtoY
+		Var: _WeiHedge
+		Var: _WeiPonzi
+		Var: _WeiSpec
+		Var: _Y
+		Var: _YN
+		Var: _gA
+		Var: _gY
+		Var: _inf
+		Var: _pie
+		Var: _u
+		Param: bandB
+		Param: bandT
+		Param: beta
+		Param: epsilon
+		Param: gamma
+		Param: muFN
+		Param: nBanks
+		Param: psi1
+		Param: psi2
+		Param: sigmaFN
+		Param: tau1
+		Param: tau2
+		Var: updateProbDrawBank
+		Param: varPhi1
+		Param: varPhi2
+		Var: _br
+		Var: BankruptcyRate
+		Var: _HHI
+		Var: _TD
+		Var: _TechHet
+		Var: WorkingCapitalToTotalLoanDemand
+
+	}
+
+	Var: Init
+	Param: flagProductivity
+	Param: flagRationing
+	Param: flagFloatingInterestRate
+	Param: flagVariableBankInterestRate
+	Param: Assets0
+	Param: gk0
+	Param: inf0
+	Param: u0
+	Param: K0
+	Param: Nf0
+	Param: h0
+	Param: lev0
+	Param: r0
+	Param: nk0
+	Param: ibk0
+	Param: gDebtGDP0
+	Param: kFilledInit
+	Param: tol
+	Param: flagChecks
+	Param: Tshock
+	Param: flagShock
+
+}
+
+
+DATA
+
+Object: Root C	1
+Var: Init 0 n + n n
+Param: flagProductivity 0 n + n n	0
+Param: flagRationing 0 n + n n	1
+Param: flagFloatingInterestRate 0 n + n n	0
+Param: flagVariableBankInterestRate 0 n + n n	1
+Param: Assets0 0 n + n n	100000
+Param: gk0 0 n + n n	0.022
+Param: inf0 0 n + n n	0.008
+Param: u0 0 n + n n	0.82
+Param: K0 0 n + n n	1000000
+Param: Nf0 0 n + n n	92000
+Param: h0 0 n + n n	0.168
+Param: lev0 0 n + n n	0.3
+Param: r0 0 n + n n	0.956
+Param: nk0 0 n + n n	0.068
+Param: ibk0 0 n + n n	0.055
+Param: gDebtGDP0 0 n + n n	0.5
+Param: kFilledInit 0 n + n n	11
+Param: tol 0 n + n n	0.0001
+Param: flagChecks 0 n + n n	1
+Param: Tshock 0 n + n n	320
+Param: flagShock 0 n + n n	1
+
+Object: Countries C	1
+Var: Agg_NominalSales 0 n + n n
+Var: Agg_RealSales 0 n + n n
+Var: AggregateAssetsFirms 0 n + n n
+Var: AggregateCapacityUtilisation 1 n + n n	0
+Var: AggregateCapitalStock 1 n + n n	0
+Var: AggregateConsumption 0 n + n n
+Var: AggregateDebtAmortisation 0 n + n n
+Var: AggregateDebtFirms 1 n + n n	0
+Var: AggregateDemand 0 n + n n
+Var: AggregateDepreciation 0 n + n n
+Var: AggregateDividendPayoutRatioFirms 0 n + n n
+Var: AggregateDividendsBanks 0 n + n n
+Var: AggregateDividendsFirms 0 n + n n
+Var: AggregateFirmDeposits 1 n + n n	0
+Var: AggregateGrowthProductivity 1 n + n n	0
+Var: AggregateInventories 1 n + n n	0
+Var: AggregateInvestment 0 n + n n
+Var: AggregateLeverage 1 n + n n	0
+Var: AggregateNewLoans 0 n + n n
+Var: AggregateNominalCapital 1 n + n n	0
+Var: AggregateNominalConsumption 0 n + n n
+Var: AggregateNominalDepreciation 0 n + n n
+Var: AggregateNominalInvestment 0 n + n n
+Var: AggregateNonPerformingLoans 0 n + n n
+Var: AggregateProduction 0 n + n n
+Var: AggregateProductivity 1 n + n n	0
+Var: AggregateProfitRate 0 n + n n	<upd: 2 0 1 0>
+Var: AggregateProfits 0 n + n n
+Var: AggregateSavingFirms 0 n + n n
+Var: AggregateSupply 0 n + n n
+Var: AggregateWageBill 0 n + n n
+Var: AverageInterestPayment 0 n + n n
+Var: AverageMarkup 0 n + n n
+Var: BottomBinaryEmploymentGrowth 0 n + n n
+Var: ChangeBillsBanksSector 0 n + n n
+Var: ChangeBillsHouseholdsSector 0 n + n n
+Var: ChangeDebtFirmsSector 0 n + n n
+Var: ChangeDepositsBanksSector 0 n + n n
+Var: ChangeDepositsFirmsSector 0 n + n n
+Var: ChangeDepositsHouseholdsSector 0 n + n n
+Var: ChangeLoanPortfolioBanksSector 0 n + n n
+Var: CheckBudgetConstraintBanksSector 0 n + n n
+Var: CheckBudgetConstraintFirmsSector 0 n + n n
+Var: CheckBudgetConstraintGovernmentSector 0 n + n n
+Var: CheckBudgetConstraintHouseholdsSector 0 n + n n
+Var: CheckCapitalStock 0 n + n n
+Var: CheckFinancialSavings 0 n + n n
+Var: CheckFirmsDebt 0 n + n n
+Var: CheckGovernmentDebt 0 n + n n
+Var: CheckInventory 0 n + n n
+Var: CheckNominalSalesDemand 0 n + n n
+Var: CheckOutputDemandSupply 0 n + n n
+Var: CheckRealSalesDemand 0 n + n n
+Var: CheckSupplyDemand 0 n + n n
+Var: Exit 0 n + n n
+Var: FinancialFragilityIndex 0 n + n n
+Var: FinancialSavingsBankingSector 0 n + n n
+Var: FinancialSavingsBankingSector_GDP 0 n + n n
+Var: FinancialSavingsFirmsSector 0 n + n n
+Var: FinancialSavingsFirmsSector_GDP 0 n + n n
+Var: FinancialSavingsGovermentSector 0 n + n n
+Var: FinancialSavingsGovermentSector_GDP 0 n + n n
+Var: FinancialSavingsHouseholdsSector 0 n + n n
+Var: FinancialSavingsHouseholds_GDP 0 n + n n
+Var: GovernmentDebtToGDPRatio 0 n + n n
+Var: GrowthNominalWage 0 n + n n
+Var: GrowthRateCapitalStock 0 n + n n
+Var: GrowthRateEmployment 1 n + n n	0
+Var: GrowthRateMaxProductivity 0 n + n n
+Var: HouseholdsWealthGDP 0 n + n n
+Var: IncidenceHedgeFinancing 0 n + n n
+Var: IncidencePonziFinancing 0 n + n n
+Var: IncidenceSpeculativeFinancing 0 n + n n
+Var: Inflation 4 n + n n	0	0	0	0
+Var: InvToCapitalRatio 0 n + n n
+Var: InvToGDPRatio 0 n + n n
+Var: NominalGDP_Demand 0 n + n n
+Var: NominalWage 1 n + n n	0
+Var: PriceLevel 1 n + n n	0
+Var: ProfitDebtDistributionIndex 0 n + n n
+Var: RealGDP_Demand 1 n + n n	0
+Var: ReplacementInvToCapitalRatio 0 n + n n
+Var: StochasticComponentGrowthNominalWage 0 n + n n
+Var: TotalLabour 1 n + n n	0
+Var: UpperBinaryEmploymentGrowth 0 n + n n
+Var: WeightedIncidenceHedgeFinancing 0 n + n n
+Var: WeightedIncidencePonziFinancing 0 n + n n
+Var: WeightedIncidenceSpeculativeFinancing 0 n + n n
+Var: _A 0 s + n n
+Var: _AssetsF 0 s + n n
+Var: _BtoY 0 n + n n
+Var: _C 0 s + n n
+Var: _DF 0 s + n n
+Var: _FFI 0 s + n n
+Var: _G 0 s + n n
+Var: _I 0 s + n n
+Var: _Inv 0 s + n n
+Var: _K 0 s + n n
+Var: _KN 0 s + n n
+Var: _L 0 s + n n
+Var: _Lev 0 s + n n
+Var: _LumH 0 s + n n
+Var: _LumL 0 s + n n
+Var: _Markup 0 s + n n
+Var: _MedA 0 s + n n
+Var: _MinA 0 s + n n
+Var: _Minskian 0 s + n n
+Var: _N 0 s + n n
+Var: _NI 0 s + n n
+Var: _P 0 s + n n
+Var: _PDIndex 0 s + n n
+Var: _ProfitRate 0 s + n n
+Var: _Profits 0 s + n n
+Var: _SN 0 s + n n
+Var: _SavbToY 0 n + n n
+Var: _SavfToY 0 n + n n
+Var: _SavgToY 0 n + n n
+Var: _SavhToY 0 n + n n
+Var: _Tax 0 s + n n
+Var: _UnwHedge 0 s + n n
+Var: _UnwPonzi 0 s + n n
+Var: _UnwSpec 0 s + n n
+Var: _VtoY 0 n + n n
+Var: _WeiHedge 0 s + n n
+Var: _WeiPonzi 0 s + n n
+Var: _WeiSpec 0 s + n n
+Var: _Y 0 s + n n
+Var: _YN 0 s + n n
+Var: _gA 0 s + n n
+Var: _gY 0 s + n n	<upd: 2 0 1 0>
+Var: _inf 0 s + n n
+Var: _pie 0 n + n n
+Var: _u 0 s + n n
+Param: bandB 0 n + n n	0.15
+Param: bandT 0 n + n n	0.7
+Param: beta 0 n + n n	0.2130067
+Param: epsilon 0 n + n n	1
+Param: gamma 0 n + n n	0.03
+Param: muFN 0 n + n n	0
+Param: nBanks 0 n + n n	1
+Param: psi1 0 n + n n	0.8
+Param: psi2 0 n + n n	1
+Param: sigmaFN 0 n + n n	0.015
+Param: tau1 0 n + n n	0
+Param: tau2 0 n + n n	0.35
+Var: updateProbDrawBank 0 n + n n
+Param: varPhi1 0 n + n n	1
+Param: varPhi2 0 n + n n	3
+Var: _br 0 s + n n
+Var: BankruptcyRate 0 n + n n
+Var: _HHI 0 s + n n
+Var: _TD 0 n + n n
+Var: _TechHet 0 s + n n
+Var: WorkingCapitalToTotalLoanDemand 0 s + n n
+
+Object: Households C	1
+Var: CapitalContribution 0 n + n n
+Var: Consumption 0 n + n n
+Var: HouseholdBills 1 n + n n	0
+Var: HouseholdDeposits 1 n + n n	0
+Var: HouseholdDisposableIncome 0 n + n n
+Var: HouseholdWealth 1 n + n n	0
+Var: NominalConsumption 0 n + n n
+Var: TaxHousehold 0 n + n n
+Var: TotalIncomeHousehold 0 n + n n
+Param: alpha1 0 n + n n	1
+Param: alpha2 0 n + n n	0
+
+Object: Sectors C	1
+Var: AverageCompetitiveness 0 n + n n
+Var: AveragePriceForCompetitiveness 0 n + n n
+Var: AverageUnfilledDemandForCompetitiveness 1 n + n n	0
+Var: CheckMarketShare 0 n + n n
+Var: Entry 0 n + n n
+Var: ExpectedPrice 0 n + n n
+Var: NearZeroMarketShare 0 n + n n
+Var: NumberOfEntrants 0 n + n n
+Func: RebaseMarketShare 0 n + n n
+Var: RevisionSales 0 n + n n
+Var: SectorCapital 0 n + n n
+Var: TechnologicalFrontier 1 n + n n	0
+Var: TotalUnfilledDemand 0 n + n n
+Var: UnitsOfLabour 0 n + n n
+Param: betaDist1 0 n + n n	3
+Param: betaDist2 0 n + n n	3
+Param: betaEntry1 0 n + n n	6
+Param: betaEntry2 0 n + n n	2
+Param: betaMax 0 n + n n	0.08
+Param: betaMin 0 n + n n	-0.08
+Param: bottomBoundSizeEntry 0 n + n n	0.3
+Param: chi 0 n + n n	0.5
+Param: etaf 0 n + n n	0
+Param: gamma0 0 n + n n	0.015
+Param: gammau 0 n + n n	0.2
+Param: idSector 0 n + n n	1
+Param: initialMarkup 0 n + n n	0
+Param: iota 0 n + n n	0.2
+Param: kappa 0 n + n n	20
+Param: lambda 0 n + n n	10
+Param: maxGrowthCapacity 0 n + n n	0.25
+Param: maxInvestmentRatio 0 n + n n	0.4
+Param: maxReplacementInvestment 0 n + n n	0.25
+Param: minimumMarketShareTolerance 0 n + n n	1e-07
+Param: n 0 n + n n	200
+Param: normalCapacity 0 n + n n	0
+Param: nu 0 n + n n	1.5
+Param: omega1 0 n + n n	3
+Param: omega2 0 n + n n	3
+Param: payback 0 n + n n	7
+Param: zeta1 0 n + n n	2
+Param: zeta2 0 n + n n	2
+Param: topBoundSizeEntry 0 n + n n	0.5
+Param: upsilon 0 n + n n	0.1
+Param: xi 0 n + n n	0.5
+Param: etaf1 0 n + n n	0.5
+Param: varepsilon 0 n + n n	2.34173
+
+Object: Firms C	1
+Var: ACurrent 1 n + n n	0
+Var: ActualInvestment 0 n + n n
+Var: Amortisation 0 n + n n
+Var: AvailableCapitalStock 0 n + n n
+Var: AverageInterestRate 0 n + n n
+Var: AvgLabourProductivity 1 n + n n	0
+Param: BankID 1 n + n n	1
+Var: CapacityUtilisation 0 n + n n
+Var: CapitalDepreciation 0 n + n n
+Var: CapitalShare 0 n + n n
+Var: CapitalVintageHousekeeping 0 n + n n
+Var: Competitiveness 0 n + n n
+Var: CreateOutstandingLoan 0 n + n n
+Var: CreditSupply 0 n + n n
+Var: DebtServicing 0 n + n n
+Var: DebtServicingToOperatingCashFlowRatio 1 n + n n	0
+Var: DebtToSalesRatio 1 n + n n	0
+Var: DefaultFlag 0 n + n n
+Func: DefineCreditLimit 0 n + n n
+Var: DemandLoans 0 n + n n
+Param: DemandLoansForBankRiskEvaluation 0 n + n n	0
+Var: DesiredCapacityUtilisation 1 n + n n	0
+Var: DesiredDemandLabour 0 n + n n
+Var: DesiredProduction 0 n + n n
+Var: DividendPayoutRatio 0 n + n n
+Func: DrawABank 0 n + n n
+Var: EffectiveDemandLabour 0 n + n n
+Var: EmbedCapacity 0 n + n n
+Param: EntryTime 0 n + n n	0
+Var: ExAnteAvgLabourProductivity 0 n + n n
+Var: ExpansionInvestment 0 n + n n
+Var: ExpectedOperatingCashFlow 0 n + n n
+Var: ExpectedReturnOfLoanProject 0 n + n n
+Var: ExpectedSales 1 n + n n	0
+Var: ExpectedWageBill 0 n + n n
+Var: FirmAssets 0 n + n n
+Var: FirmDefault 0 n + n n
+Var: FirmDemand 1 n + n n	0
+Var: FirmDeposits 1 n + n n	0
+Var: FirmDeposits_PostCreditUpdate 0 n + n n
+Var: FirmDeposits_PostDividendsUpdate 0 n + n n
+Var: FirmDeposits_PostProductionUpdate 0 n + n n
+Var: FirmDeposits_PostSalesUpdate 0 n + n n
+Var: FirmDeposits_PostTaxesUpdate 0 n + n n
+Var: FirmDividends 0 n + n n
+Var: FirmProductivityGrowth 0 n + n n
+Func: FunctionReplacementInvestment 0 n + n n
+Var: FundsExpansionInvestment 0 n + n n
+Var: FundsReplacementInvestment 0 n + n n
+Var: GrossProfits 0 n + n n
+Var: HedgeFirmFlag 0 n + n n
+Var: Imitation 0 n + n n
+Var: ImitationWorkers 0 n + n n
+Var: Innovation 0 n + n n
+Var: InnovationWorkers 0 n + n n
+Var: InterestAgreedBank 0 n + n n
+Var: InterestPayment 0 n + n n
+Var: Inventory 1 n + n n	0
+Var: InventoryRevaluation 0 n + n n
+Var: Leverage 1 n + n n	0
+Var: MarketShare 2 n + d n	0	0
+Var: Markup 1 n + n n	0.45
+Var: MinskianFirm 0 n + n n
+Var: NetProfits 0 n + n n
+Var: NewMachineUnitCost 0 n + n n
+Var: NominalCapitalStock 1 n + n n	0
+Var: NominalDepreciation 0 n + n n
+Var: NominalInvestment 0 n + n n
+Var: NominalSales 1 n + n n	0
+Var: OperatingCashFlow 1 n + n n	0
+Var: PlannedExpansionInvestment 0 n + n n
+Var: PlannedInvestment 0 n + n n
+Var: PlannedReplacementInvestment 0 n + n n
+Var: PonziFirmFlag 0 n + n n
+Var: Price 0 n + n n
+Var: ProbabilityOfDefault 0 n + n n
+Var: Production 0 n + n n
+Var: ProductionWorkers 0 n + n n
+Var: RDExpenditure 0 n + n n
+Var: RealCapitalStock 0 n + n n
+Var: RealDepreciation 0 n + n n
+Var: ReplacementInvestment 0 n + n n
+Var: Sales 1 n + n n	0
+Var: ShrinkCapacity 0 n + n n
+Var: SpeculativeFirmFlag 0 n + n n
+Var: TaxFirm 0 n + n n
+Var: TotalDebt 1 n + n n	0
+Var: UnconstrainedReplacementInvestment 0 n + n n
+Var: UndistributedProfits 0 n + n n
+Var: UnfilledDemand 1 n + n n	0
+Var: UnitCost 1 n + n n	0
+Var: WageBill 0 n + n n
+Var: WorkersFirm 0 n + n n
+Var: WorkersRD 0 n + n n
+Var: __A 0 n + n n
+Var: __Assets 0 s + n n
+Var: __CashF 0 n + n n
+Var: __I 0 s + n n
+Var: __K 0 n + n n
+Var: __KN 0 s + n n
+Var: __Lev 0 s + n n
+Var: __Lf 0 s + n n
+Var: __Minskian 0 n + n n
+Var: __ProfitRate 0 s + n n
+Var: __WeiItoK 0 n + n n
+Var: __int 0 s + n n
+Param: flagExit 0 n + n n	0
+Param: idFirm 0 n + n n	1
+Param: marketShareEntry 0 n + n n	0
+Param: maximumReplacementInvestmentNominal 0 n + n n	0
+Param: maximumReplacementInvestmentReal 0 n + n n	0
+Param: probImitation 0 n + n n	1
+Var: WorkingCapitalLoanDemand 0 n + n n
+
+Object: CapitalVintage C	1
+Var: AgeVintage 0 n + n n
+Var: CapitalQuantity 1 n + n n	0
+Var: PaybackReplacementVintage 0 n + n n
+Param: QuantityDepreciation 0 n + n n	0
+Param: QuantityReplace 0 n + n n	0
+Param: Replace 0 n + n n	0
+Var: UnitCostVintage 0 n + n n
+Param: VintagePrice 0 n + n n	0
+Param: VintageProductivity 0 n + n n	0
+Param: VintageTime 0 n + n n	0
+Param: scrapTime 0 n + n n	0
+Param: RevisedByShrinkCapacity 0 n + n n	0
+
+Object: OutstandingLoan C	1
+Var: LoanOutstanding 1 n + n n	0
+Param: BankSupplierID 0 n + n n	0
+Param: AmortisationSchedule 0 n + n n	0
+Param: PeriodsRemaining 0 n + n n	0
+Param: InterestSchedule 0 n + n n	0
+Param: LoanInterestRate 1 n + n n	0
+
+Object: Banks C	1
+Var: AmortisationDue 0 n + n n
+Var: AmortisationFlow 0 n + n n
+Var: AverageBankInterestRate 1 n + n n	0
+Var: BankAssets 0 n + n n
+Var: BankCreditSupply 0 n + n n
+Var: BankDividends 0 n + n n
+Var: BankGrossProfits 0 n + n n
+Var: BankTax 0 n + n n
+Var: BankTaxableIncome 0 n + n n
+Var: BillsBank 1 n + n n	0
+Var: ChangeBillsBank 0 n + n n
+Var: ChangeDepositsBank 0 n + n n
+Var: ChangeLoanPortfolio 0 n + n n
+Param: DebtServicingRatio 0 n + n n	0
+Var: DefaultLoans 0 n + n n
+Var: DepositsBank 1 n + n n	0
+Var: DepositsFromFirms 0 n + n n
+Var: InterestIncome 0 n + n n
+Func: InterestRateBank 0 n + n n
+Var: LoanPortfolio 1 n + n n	0
+Var: LoanShare 1 n + n n	0
+Var: NetWorthBank 1 n + n n	0
+Var: NonPerformingLoans 0 n + n n
+Var: UndistributedProfitsBank 0 n + n n
+Param: etab 0 n + n n	0.9
+Param: idBank 0 n + n n	1
+Param: interestSpread 0 n + n n	0
+Param: mu 0 n + n n	0
+Param: probDrawBank 0 n + n n	1
+
+Object: Government C	1
+Var: ChangeGovernmentDebt 0 n + n n
+Param: Gamma0 0 n + n n	0.17
+Param: Gamma1 0 n + n n	0.1
+Var: GovernmentConsumption 0 n + n n
+Var: GovernmentDebt 1 n + n n	0
+Var: GovernmentDebtToGDP 0 n + n n
+Var: InterestGovernmentDebt 0 n + n n
+Var: NominalDeficitGovernment 0 n + n n
+Var: NominalGovernmentConsumption 0 n + n n
+Var: TaxToGDP 0 n + n n
+Var: TotalTaxRevenues 0 n + n n
+
+Object: CentralBank C	1
+Var: BaseInterestRate 1 s + n p	0.025
+Param: fullShock 0 n + n n	0.01
+Param: rhoShock 0 n + n n	0.05
+Param: InitialInterestRate 0 n + n n	0.025
+Param: target_inflation 0 n + n n	0.01
+Var: rShock 1 s + n n	0
+Param: nominal_target_rate 0 n + n n	0
+Param: interest_adjustment_step 0 n + n n	0.0025
+Param: target_capacity 0 n + n n	0.8
+Param: target_leverage 0 n + n n	0.3
+Param: cb_sensib_inflation 0 n + n n	0.5
+Param: cb_sensib_capacity 0 n + n n	0
+Param: cb_sensib_leverage 0 n + n n	0
+
+SIM_NUM 1
+SEED 592
+MAX_STEP 520
+EQUATION fun_model_jeec.cpp
+MODELREPORT report_Sim1.html
