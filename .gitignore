@@ -24,7 +24,6 @@
 !*.xls
 !*.sty
 !*.el
-*lsd
 !*.lsd
 !*.h
 !*.cpp
@@ -34,3 +33,5 @@
 !*.sh
 !.gitkeep
 !.editorconfig
+lsd
+lsdNW
