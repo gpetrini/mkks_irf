@@ -282,6 +282,15 @@ Label Root
 			Param: fullShock
 			Param: rhoShock
 			Param: InitialInterestRate
+			Param: target_inflation
+			Var: rShock
+			Param: nominal_target_rate
+			Param: interest_adjustment_step
+			Param: target_capacity
+			Param: target_leverage
+			Param: cb_sensib_inflation
+			Param: cb_sensib_capacity
+			Param: cb_sensib_leverage
 
 		}
 
@@ -512,7 +521,7 @@ Var: AggregateFirmDeposits 1 n + n n	0
 Var: AggregateGrowthProductivity 1 n + n n	0
 Var: AggregateInventories 1 n + n n	0
 Var: AggregateInvestment 0 n + n n
-Var: AggregateLeverage 0 n + n n
+Var: AggregateLeverage 1 n + n n	0
 Var: AggregateNewLoans 0 n + n n
 Var: AggregateNominalCapital 1 n + n n	0
 Var: AggregateNominalConsumption 0 n + n n
@@ -568,7 +577,7 @@ Var: HouseholdsWealthGDP 0 n + n n
 Var: IncidenceHedgeFinancing 0 n + n n
 Var: IncidencePonziFinancing 0 n + n n
 Var: IncidenceSpeculativeFinancing 0 n + n n
-Var: Inflation 1 n + n n	0
+Var: Inflation 4 n + n n	0	0	0	0
 Var: InvToCapitalRatio 0 n + n n
 Var: InvToGDPRatio 0 n + n n
 Var: NominalGDP_Demand 0 n + n n
@@ -894,10 +903,19 @@ Var: TaxToGDP 0 n + n n
 Var: TotalTaxRevenues 0 n + n n
 
 Object: CentralBank C	1
-Var: BaseInterestRate 1 s + n n	0.025
+Var: BaseInterestRate 1 s + n p	0.025
 Param: fullShock 0 n + n n	0.01
 Param: rhoShock 0 n + n n	0.05
 Param: InitialInterestRate 0 n + n n	0.025
+Param: target_inflation 0 n + n n	0.01
+Var: rShock 1 s + n n	0
+Param: nominal_target_rate 0 n + n n	0
+Param: interest_adjustment_step 0 n + n n	0.0025
+Param: target_capacity 0 n + n n	0.8
+Param: target_leverage 0 n + n n	0.3
+Param: cb_sensib_inflation 0 n + n n	0.5
+Param: cb_sensib_capacity 0 n + n n	0
+Param: cb_sensib_leverage 0 n + n n	0
 
 SIM_NUM 1
 SEED 1
@@ -1136,6 +1154,8 @@ END_DESCRIPTION
 
 Variable_AggregateLeverage
 
+_INIT_
+All 1 instances equal to 0
 END_DESCRIPTION
 
 Variable_AggregateNewLoans
@@ -2998,6 +3018,58 @@ Parameter_InitialInterestRate
 
 _INIT_
 All 1 instances equal to 0.025
+END_DESCRIPTION
+
+Parameter_target_inflation
+
+_INIT_
+All 1 instances equal to 0.01
+END_DESCRIPTION
+
+Variable_rShock
+Shock to prime interest rate for impulse response function computation
+END_DESCRIPTION
+
+Parameter_nominal_target_rate
+
+_INIT_
+All 1 instances equal to 0
+END_DESCRIPTION
+
+Parameter_interest_adjustment_step
+
+_INIT_
+All 1 instances equal to 0.0025
+END_DESCRIPTION
+
+Parameter_target_capacity
+
+_INIT_
+All 1 instances equal to 0.8
+END_DESCRIPTION
+
+Parameter_target_leverage
+
+_INIT_
+All 1 instances equal to 0.3
+END_DESCRIPTION
+
+Parameter_cb_sensib_inflation
+
+_INIT_
+All 1 instances equal to 0.5
+END_DESCRIPTION
+
+Parameter_cb_sensib_capacity
+
+_INIT_
+All 1 instances equal to 0
+END_DESCRIPTION
+
+Parameter_cb_sensib_leverage
+
+_INIT_
+All 1 instances equal to 0
 END_DESCRIPTION
 
 
