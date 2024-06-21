@@ -9,7 +9,7 @@ MKKS-IRF
 #
 645x474+953+149
 1050x572+763+240
-data-irf/S3-noshock.lsd
+data-irf/S2-noshock.lsd
 Root
 1
 0
