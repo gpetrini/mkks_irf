@@ -1,100 +1,86 @@
 # Model compilation options
 TARGET=lsd
 FUN=fun_model_jeec
-FUN_EXTRA=jeec_initialisation.h jeec_aggregate.h jeec_banks.h jeec_firms_capital.h jeec_firms_financial.h jeec_firms_rd.h jeec_government.h jeec_households.h jeec_firms_production.h jeec_demand_distribution.h jeec_labour_market.h jeec_entry_exit.h jeec_checks.h jeec_save.h
+FUN_EXTRA=jeec_initialisation.h jeec_aggregate.h jeec_banks.h jeec_firms_capital.h jeec_firms_financial.h jeec_firms_rd.h jeec_government.h jeec_households.h jeec_firms_production.h jeec_demand_distribution.h jeec_labour_market.h jeec_entry_exit.h jeec_checks.h jeec_save.h central_bank.h
 SWITCH_CC=-O3 -ggdb3
 SWITCH_CC_LNK=
 
 # System compilation options
-LSDROOT=/home/italo/LSD
+# LSD options
+LSDROOT=/home/gpetrini/LSD
 SRC=src
-EXT=
 
 # Libraries options
 TCL_VERSION=8.6
-PATH_TCL_HEADER=/usr/include/tcl$(TCL_VERSION) #path to the file tcl.h
-PATH_TK_HEADER=/usr/include/tcl$(TCL_VERSION) #path to the tk.h
+PATH_TCLTK_HEADER=/usr/include/tcl$(TCL_VERSION)
+PATH_TCLTK_LIB=/usr/lib/tcl$(TCL_VERSION)
+TCLTK_LIB=-ltcl$(TCL_VERSION) -ltk$(TCL_VERSION)
 PATH_HEADER=.
-PATH_TCL_LIB=.
-PATH_TK_LIB=.
 PATH_LIB=.
-TCL_LIB=-ltcl$(TCL_VERSION)
-TK_LIB=-ltk$(TCL_VERSION)
-LIBS=-lz -lpthread
+LIB=-lz -lpthread
 
 # Compiler options
 CC=g++
-GLOBAL_CC=-march=native -std=gnu++14 -w
+GLOBAL_CC=-march=native -ffp-contract=off -std=gnu++14 -w
 SSWITCH_CC=-fnon-call-exceptions -O3
-LSDROOT=/home/italo/LSD
 
-# Body of makefileNW (from src/makefile_baseNW.txt)
-# reset variables to allow for no-window version
-LSDROOT=.
-
+# Body of makefileNW (from makefile_NW.txt)
 # specify where are the sources of LSD
 SRC_DIR=$(SRC)/
 
 # location of headers
-INCLUDE=-I$(PATH_HEADER) -I$(SRC)
+INCLUDE=-I$(SRC) -I$(PATH_HEADER)
+
+# common dependencies (all source files)
+COM_DEP=$(SRC_DIR)decl.h $(SRC_DIR)common.h 
 
 # no-window specific variables
-LIBS_NW=$(LIBS) -lpthread
-CC_NW=$(CC_CROSS)g++
-SWITCH_CC_NW=$(GLOBAL_CC) $(SWITCH_CC) -O3 -g0
 SUFFIX_NW=NW
+LIB_NW=$(LIB) -lpthread
+CC_NW=$(CC_CROSS)g++
+SWITCH_CC_NW=$(GLOBAL_CC) $(SWITCH_CC) -D_NW_ -O3 -g0
 TARGET_NW=lsd$(SUFFIX_NW)
 
+# OS command to delete files
+RM=rm -f
+
 # link executable
-$(TARGET_NW)$(EXT): $(FUN)$(SUFFIX_NW).o $(SRC_DIR)main.o $(SRC_DIR)lsdmain.o \
-$(SRC_DIR)file.o $(SRC_DIR)nets.o $(SRC_DIR)object.o $(SRC_DIR)util.o \
-$(SRC_DIR)variab.o
-	$(CC_NW) $(SWITCH_CC_NW) $(FUN)$(SUFFIX_NW).o $(SRC_DIR)main.o \
-	$(SRC_DIR)lsdmain.o $(SRC_DIR)file.o $(SRC_DIR)nets.o $(SRC_DIR)object.o \
-	$(SRC_DIR)util.o $(SRC_DIR)variab.o \
-	$(SWITCH_CC_LNK) -L$(PATH_LIB) $(LIBS_NW) -o $(TARGET_NW)
+$(TARGET_NW): $(FUN)$(SUFFIX_NW).o $(SRC_DIR)common.o $(SRC_DIR)lsdmain.o \
+$(SRC_DIR)file.o $(SRC_DIR)nets.o $(SRC_DIR)object.o \
+$(SRC_DIR)util.o $(SRC_DIR)variab.o
+	$(CC_NW) $(SWITCH_CC_NW) $(FUN)$(SUFFIX_NW).o $(SRC_DIR)common.o \
+	$(SRC_DIR)lsdmain.o $(SRC_DIR)file.o $(SRC_DIR)nets.o \
+	$(SRC_DIR)object.o $(SRC_DIR)util.o $(SRC_DIR)variab.o \
+	$(SWITCH_CC_LNK) -L$(PATH_LIB) $(LIB_NW) -o $(TARGET_NW)
 
 # compile modules
-$(FUN)$(SUFFIX_NW).o: $(FUN).cpp $(FUN_EXTRA) model_options.txt \
-$(SRC_DIR)check.h $(SRC_DIR)choose.h $(SRC_DIR)decl.h \
-$(SRC_DIR)fun_head.h $(SRC_DIR)fun_head_fast.h
-	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) \
-	-c $(FUN).cpp -o $(FUN)$(SUFFIX_NW).o
+$(FUN)$(SUFFIX_NW).o: $(FUN).cpp $(FUN_EXTRA) $(SRC_DIR)check.h \
+$(SRC_DIR)fun_head.h $(SRC_DIR)decl.h $(SRC_DIR)common.h
+	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) -c $(FUN).cpp -o $(FUN)$(SUFFIX_NW).o
 
-$(SRC_DIR)main.o: $(SRC_DIR)main.cpp \
-$(SRC_DIR)choose.h $(SRC_DIR)decl.h $(SRC_DIR)system_options.txt
-	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) \
-	-c $(SRC_DIR)main.cpp -o $(SRC_DIR)main.o
+$(SRC_DIR)common.o: $(SRC_DIR)common.cpp $(SRC_DIR)common.h
+	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) -c $(SRC_DIR)common.cpp -o $(SRC_DIR)common.o
 
-$(SRC_DIR)lsdmain.o: $(SRC_DIR)lsdmain.cpp \
-$(SRC_DIR)choose.h $(SRC_DIR)decl.h $(SRC_DIR)system_options.txt
-	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) \
-	-c $(SRC_DIR)lsdmain.cpp -o $(SRC_DIR)lsdmain.o
+$(SRC_DIR)lsdmain.o: $(SRC_DIR)lsdmain.cpp $(SRC_DIR)decl.h $(SRC_DIR)common.h
+	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) -c $(SRC_DIR)lsdmain.cpp -o $(SRC_DIR)lsdmain.o
 
-$(SRC_DIR)file.o: $(SRC_DIR)file.cpp \
-$(SRC_DIR)choose.h $(SRC_DIR)decl.h $(SRC_DIR)system_options.txt
-	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) \
-	-c $(SRC_DIR)file.cpp -o $(SRC_DIR)file.o
+$(SRC_DIR)file.o: $(SRC_DIR)file.cpp $(SRC_DIR)decl.h $(SRC_DIR)common.h
+	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) -c $(SRC_DIR)file.cpp -o $(SRC_DIR)file.o
 
-$(SRC_DIR)nets.o: $(SRC_DIR)nets.cpp \
-$(SRC_DIR)choose.h $(SRC_DIR)decl.h $(SRC_DIR)system_options.txt
-	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) \
-	-c $(SRC_DIR)nets.cpp -o $(SRC_DIR)nets.o
+$(SRC_DIR)nets.o: $(SRC_DIR)nets.cpp $(SRC_DIR)decl.h $(SRC_DIR)common.h
+	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) -c $(SRC_DIR)nets.cpp -o $(SRC_DIR)nets.o
 
-$(SRC_DIR)object.o: $(SRC_DIR)object.cpp \
-$(SRC_DIR)choose.h $(SRC_DIR)decl.h $(SRC_DIR)system_options.txt
-	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) \
-	-c $(SRC_DIR)object.cpp -o $(SRC_DIR)object.o
+$(SRC_DIR)object.o: $(SRC_DIR)object.cpp $(SRC_DIR)decl.h $(SRC_DIR)common.h
+	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) -c $(SRC_DIR)object.cpp -o $(SRC_DIR)object.o
 
-$(SRC_DIR)util.o: $(SRC_DIR)util.cpp \
-$(SRC_DIR)choose.h $(SRC_DIR)decl.h $(SRC_DIR)system_options.txt
-	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) \
-	-c $(SRC_DIR)util.cpp -o $(SRC_DIR)util.o
+$(SRC_DIR)util.o: $(SRC_DIR)util.cpp $(SRC_DIR)decl.h $(SRC_DIR)common.h
+	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) -c $(SRC_DIR)util.cpp -o $(SRC_DIR)util.o
 
-$(SRC_DIR)variab.o: $(SRC_DIR)variab.cpp \
-$(SRC_DIR)choose.h $(SRC_DIR)decl.h $(SRC_DIR)system_options.txt
-	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) \
-	-c $(SRC_DIR)variab.cpp -o $(SRC_DIR)variab.o
+$(SRC_DIR)variab.o: $(SRC_DIR)variab.cpp $(SRC_DIR)decl.h $(SRC_DIR)common.h
+	$(CC_NW) $(SWITCH_CC_NW) $(INCLUDE) -c $(SRC_DIR)variab.cpp -o $(SRC_DIR)variab.o
 	
+# remove compiled files
 clean:
-	rm $(SRC_DIR)*.o $(FUN)$(SUFFIX_NW).o $(TARGET_NW)*
+	$(RM) $(SRC_DIR)common.o $(SRC_DIR)lsdmain.o $(SRC_DIR)file.o $(SRC_DIR)nets.o \
+	$(SRC_DIR)object.o $(SRC_DIR)util.o $(SRC_DIR)variab.o $(FUN)$(SUFFIX_NW).o \
+	$(TARGET_NW) $(TARGET_NW).exe
