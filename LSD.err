@@ -1208,3 +1208,11 @@ command returned bad code: 2
 Message:
 command returned bad code: 2
 -----
+
+(06/21/24 18:59:54)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
