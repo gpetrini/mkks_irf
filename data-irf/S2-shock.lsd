@@ -905,7 +905,7 @@ Var: TotalTaxRevenues 0 n + n n
 Object: CentralBank C	1
 Var: BaseInterestRate 1 s + n p	0.025
 Param: fullShock 0 n + n n	0.01
-Param: rhoShock 0 n + n n	0.05
+Param: rhoShock 0 n + n n	0.03
 Param: InitialInterestRate 0 n + n n	0.025
 Param: target_inflation 0 n + n n	0.01
 Var: rShock 1 s + n n	0
@@ -914,8 +914,8 @@ Param: interest_adjustment_step 0 n + n n	0.0025
 Param: target_capacity 0 n + n n	0.8
 Param: target_leverage 0 n + n n	0.3
 Param: cb_sensib_inflation 0 n + n n	0.5
-Param: cb_sensib_capacity 0 n + n n	0
-Param: cb_sensib_leverage 0 n + n n	0
+Param: cb_sensib_capacity 0 n + n n	0.3
+Param: cb_sensib_leverage 0 n + n n	-0.3
 
 SIM_NUM 1
 SEED 1
@@ -3011,7 +3011,7 @@ END_DESCRIPTION
 Parameter_rhoShock
 
 _INIT_
-All 1 instances equal to 0.05
+All 1 instances equal to 0.03
 END_DESCRIPTION
 
 Parameter_InitialInterestRate
@@ -3063,13 +3063,13 @@ END_DESCRIPTION
 Parameter_cb_sensib_capacity
 
 _INIT_
-All 1 instances equal to 0
+All 1 instances equal to 0.3
 END_DESCRIPTION
 
 Parameter_cb_sensib_leverage
 
 _INIT_
-All 1 instances equal to 0
+All 1 instances equal to -0.3
 END_DESCRIPTION
 
 
