@@ -11,6 +11,6 @@ MKKS-IRF
 1050x572+763+240
 data-irf/S3-shock.lsd
 Root
-1
+2
 0
 0.0
