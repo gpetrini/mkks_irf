@@ -9,8 +9,8 @@ MKKS-IRF
 #
 645x474+953+149
 1050x572+763+240
-data-irf/S1-shock.lsd
+data-irf/S3-shock.lsd
 Root
-1
+2
 0
 0.0

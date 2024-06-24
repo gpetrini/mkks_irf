@@ -1216,3 +1216,22 @@ command returned bad code: 2
 Message:
 command returned bad code: 2
 -----
+
+
+====================> NEW TCL SESSION
+
+(06/21/24 19:07:40)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+(06/21/24 19:08:03)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
