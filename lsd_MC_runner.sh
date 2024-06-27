@@ -145,7 +145,7 @@ for (( i=1; i<=UNIT; i++ )); do
     if [[ $i -le $REMAINDER ]]; then
         end=$((end + 1))
     fi
-    CMD="$LSD_EXEC -c 1 -f \"nice ./$BASEDIR/$LSDCONF\" -s $start -e $end -p -l \"./$BASEDIR/${LSDCONF}_$i.log\" &"
+    CMD="nice ../$LSD_EXEC -c 1 -f ./$LSDCONF -s $start -e $end -p -l ./${LSDCONF}_$i.log &"
     echo "$CMD" >> "$SCRIPT"
 
     start=$((end + 1))
