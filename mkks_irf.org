@@ -1,0 +1,7 @@
+#+title: Project todods
+
+* TODO Find Minskian state-related literature :@computer:@unicamp:@reading:@dissertation:@paper:
+* TODO Make S3 scenario stable under shock :@computer:@unicamp:@coding:@tests:@dissertation:
+* TODO Select baseline configuration :@computer:@coding:@dissertation:
+
+- Note that there is no transmission channel in S1
