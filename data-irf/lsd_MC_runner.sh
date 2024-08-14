@@ -32,11 +32,10 @@ PERIODS=
 MONTECARLO=600
 UNIT=$(nproc)
 LSD_EXEC="./lsdNW"
-EXP=7 ## Baseline + 6 experiments
 
 ### collect information from options and arguments in command ###
 
-while getopts "hd:b:u:M:p:l:K" option; do # read options included in the command line, create a list and loop through the list
+while getopts "hd:b:u:M:p:l" option; do # read options included in the command line, create a list and loop through the list
   case $option in
 
   h) # display help
@@ -62,9 +61,6 @@ while getopts "hd:b:u:M:p:l:K" option; do # read options included in the command
 
   l) # update NW executable path
     LSD_EXEC=$OPTARG ;;
-
-  K) # change the number of experiments
-    EXP=$OPTARG ;;
 
   \?) # invalid option
     echo "Error: invalid option. Run -h option for help."
@@ -118,22 +114,13 @@ else
   mkdir -p "$BASEDIR"
 fi
 
-for j in $(seq 1 "$EXP"); do
-  SCENARIO=$((j - 1))
-  DEST_FILE="$BASEDIR/${LSDCONF}${j}_1.lsd"
-  cp "$FOLDER/$LSDCONF.lsd" "$DEST_FILE"
-  sed -i -r "s/^(Param: Scenario) (.*)([\t ])[0-9\.]+\$/\1 \2\3$SCENARIO/" "$DEST_FILE"
-done
-
-for j in $(seq 1 "$EXP"); do
-  for i in $(seq 1 "$MONTECARLO"); do
-    TEMPLATE="$BASEDIR/${LSDCONF}${j}_1.lsd"
-    DEST_FILE="$BASEDIR/${LSDCONF}${j}_$i.lsd"
-    if [ "$TEMPLATE" != "$DEST_FILE" ]; then
-      cp "$TEMPLATE" "$DEST_FILE"
-    fi
-    sed -i -r "s/^(SEED) (.*)/SEED $i/" "$DEST_FILE"
-  done
+TEMPLATE="$FOLDER/${LSDCONF}.lsd"
+for i in $(seq 1 "$MONTECARLO"); do
+  DEST_FILE="$BASEDIR/${LSDCONF}_$i.lsd"
+  if [ "$TEMPLATE" != "$DEST_FILE" ]; then
+    cp "$TEMPLATE" "$DEST_FILE"
+  fi
+  sed -i -r "s/^(SEED) (.*)/SEED $i/" "$DEST_FILE"
 done
 
 EXPS=$(find "$BASEDIR" -type f -name "*.lsd" | wc -l)
@@ -153,7 +140,7 @@ for ((i = 1; i <= UNIT; i++)); do
   if [[ $i -le $REMAINDER ]]; then
     end=$((end + 1))
   fi
-  CMD="nice ../$LSD_EXEC -c 1 -f ./$LSDCONF${j} -s $start -e $end -p -l ./${LSDCONF}${j}_$i.log &"
+  CMD="nice ../$LSD_EXEC -c 1 -f ./$LSDCONF -s $start -e $end -p -l ./${LSDCONF}_$i.log &"
   echo "$CMD" >>"$SCRIPT"
 
   start=$((end + 1))
