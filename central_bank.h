@@ -1,5 +1,5 @@
 #ifndef INTERNALS
-#include "./src/fun_head_fast.h" // NOTE: So emacs can recognize internal funcions
+#include "./src/fun_head.h" // NOTE: So emacs can recognize internal funcions
 #endif
 
 EQUATION("BaseInterestRate")
