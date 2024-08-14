@@ -240,12 +240,21 @@ while (v[4] < v[3] && v[6] > v[7]) {
 }
 if (v[5] > V("ProbabilityOfDefault"))
   PLOG("\nOpa! Deu ruim!");
-v[10] = V("ExpectedOperatingCashFlow");
-v[11] = VS(ECO, "varPhi1");
-v[12] = VS(ECO, "varPhi2");
-v[13] = VL("Leverage", 1);
-v[14] = v[11] * v[10] / (log((1 - v[5]) / v[5]) + v[12] * v[13]);
-v[15] = v[14] / (1 / v[2] + v[0]);
+v[16] = VS(cur1, "risk_threshold");
+v[17] = V("DemandLoans");
+
+if (v[16] <= 0) {
+  // NOTE: Legacy code
+  v[10] = V("ExpectedOperatingCashFlow");
+  v[11] = VS(ECO, "varPhi1");
+  v[12] = VS(ECO, "varPhi2");
+  v[13] = VL("Leverage", 1);
+  v[14] = v[11] * v[10] / (log((1 - v[5]) / v[5]) + v[12] * v[13]);
+  v[15] = v[14] / (1 / v[2] + v[0]);
+
+} else {
+  v[15] = v[5] > v[16] ? 0 : v[17];
+}
 v[15] = max(0, v[15]);
 RESULT(v[15])
 

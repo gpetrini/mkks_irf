@@ -21,7 +21,7 @@ LIB=-lz -lpthread
 
 # Compiler options
 CC=g++
-GLOBAL_CC=-march=native -ffp-contract=off -std=gnu++14 -w
+GLOBAL_CC=-march=native -w
 SSWITCH_CC=-fnon-call-exceptions -O3
 
 # Body of makefile (from makefile_linux.txt)

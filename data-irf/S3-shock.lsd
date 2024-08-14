@@ -255,6 +255,7 @@ Label Root
 			Param: interestSpread
 			Param: mu
 			Param: probDrawBank
+			Param: risk_threshold
 
 		}
 
@@ -888,6 +889,7 @@ Param: idBank 0 n + n n	1
 Param: interestSpread 0 n + n n	0
 Param: mu 0 n + n n	0
 Param: probDrawBank 0 n + n n	1
+Param: risk_threshold 0 n + n n	0.1
 
 Object: Government C	1
 Var: ChangeGovernmentDebt 0 n + n n
@@ -917,7 +919,7 @@ Param: cb_sensib_inflation 0 n + n n	0.5
 Param: cb_sensib_capacity 0 n + n n	0
 Param: cb_sensib_leverage 0 n + n n	0
 
-SIM_NUM 1
+SIM_NUM 10
 SEED 1
 MAX_STEP 520
 EQUATION fun_model_jeec.cpp
@@ -2935,6 +2937,12 @@ Parameter_probDrawBank
 'probDrawBank' appears in the equation for: DrawABank, updateProbDrawBank
 _INIT_
 All 1 instances equal to 1.
+END_DESCRIPTION
+
+Parameter_risk_threshold
+
+_INIT_
+All 1 instances equal to 0.1
 END_DESCRIPTION
 
 Object_Government
