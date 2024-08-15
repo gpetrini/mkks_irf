@@ -49,3 +49,73 @@ command returned bad code: 2
 Message:
 command returned bad code: 2
 -----
+
+
+====================> NEW TCL SESSION
+
+(08/15/24 13:18:15)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+
+====================> NEW TCL SESSION
+
+(08/15/24 13:30:04)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+(08/15/24 13:30:04)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+(08/15/24 13:30:08)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+(08/15/24 13:30:08)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+(08/15/24 13:31:33)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+(08/15/24 13:31:33)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----
+
+(08/15/24 13:31:50)
+Command:
+command returned bad code: 2
+    (command bound to event)
+Message:
+command returned bad code: 2
+-----

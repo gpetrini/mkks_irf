@@ -55,12 +55,23 @@ Shock to prime interest rate for impulse response function computation
 
 double shock = v[0] = VS(ROOT, "flagShock");
 double Tshock = v[1] = VS(ROOT, "Tshock");
+double rndTshock = v[8] = VS(CBK, "rndTshock");
+if (shock && T >= Tshock && rndTshock == 0) {
+  double probShock = v[10] =
+      (T - Tshock + 1) /
+      (LAST_T - Tshock + 1); // FIXME: Think in a way to have increasing prob?
+                             // Possibly a smooth logit
+  if (probShock > RND) {
+    WRITES(CBK, "rndTshock", T);
+    rndTshock = T;
+  }
+}
 double rhoShock = v[2] = VS(CBK, "rhoShock");
 double fullshock = v[3] = VS(CBK, "fullShock");
-double rchg = v[4] = shock && Tshock == T;
+double rchg = v[4] = shock && rndTshock == T && T >= Tshock;
 double rincr = v[5] =
-    rchg ? fullshock : pow((1 - rhoShock), T - Tshock) * fullshock;
-double active = v[6] = (shock * (T >= Tshock));
+    rchg ? fullshock : pow((1 - rhoShock), T - rndTshock) * fullshock;
+double active = v[6] = (shock * (T >= rndTshock) * (T >= Tshock));
 double rshock = v[7] = (active * rincr);
 
 RESULT(rshock)

@@ -292,6 +292,7 @@ Label Root
 			Param: cb_sensib_inflation
 			Param: cb_sensib_capacity
 			Param: cb_sensib_leverage
+			Param: rndTshock
 
 		}
 
@@ -595,7 +596,7 @@ Var: WeightedIncidencePonziFinancing 0 n + n n
 Var: WeightedIncidenceSpeculativeFinancing 0 n + n n
 Var: _A 0 s + n n
 Var: _AssetsF 0 s + n n
-Var: _BtoY 0 n + n n
+Var: _BtoY 0 s + n n
 Var: _C 0 s + n n
 Var: _DF 0 s + n n
 Var: _FFI 0 s + n n
@@ -918,6 +919,7 @@ Param: target_leverage 0 n + n n	0.3
 Param: cb_sensib_inflation 0 n + n n	0.5
 Param: cb_sensib_capacity 0 n + n n	0
 Param: cb_sensib_leverage 0 n + n n	0
+Param: rndTshock 0 n + n n	0
 
 SIM_NUM 1
 SEED 1
@@ -3075,6 +3077,12 @@ All 1 instances equal to 0
 END_DESCRIPTION
 
 Parameter_cb_sensib_leverage
+
+_INIT_
+All 1 instances equal to 0
+END_DESCRIPTION
+
+Parameter_rndTshock
 
 _INIT_
 All 1 instances equal to 0
