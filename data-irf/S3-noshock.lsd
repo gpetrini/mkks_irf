@@ -783,7 +783,7 @@ Var: InterestPayment 0 n + n n
 Var: Inventory 1 n + n n	0
 Var: InventoryRevaluation 0 n + n n
 Var: Leverage 1 n + n n	0
-Var: MarketShare 2 n + d n	0	0
+Var: MarketShare 2 n + n n	0	0
 Var: Markup 1 n + n n	0.45
 Var: MinskianFirm 0 n + n n
 Var: NetProfits 0 n + n n
@@ -818,17 +818,17 @@ Var: WageBill 0 n + n n
 Var: WorkersFirm 0 n + n n
 Var: WorkersRD 0 n + n n
 Var: __A 0 n + n n
-Var: __Assets 0 s + n n
+Var: __Assets 0 n + n n
 Var: __CashF 0 n + n n
-Var: __I 0 s + n n
+Var: __I 0 n + n n
 Var: __K 0 n + n n
-Var: __KN 0 s + n n
-Var: __Lev 0 s + n n
-Var: __Lf 0 s + n n
+Var: __KN 0 n + n n
+Var: __Lev 0 n + n n
+Var: __Lf 0 n + n n
 Var: __Minskian 0 n + n n
-Var: __ProfitRate 0 s + n n
+Var: __ProfitRate 0 n + n n
 Var: __WeiItoK 0 n + n n
-Var: __int 0 s + n n
+Var: __int 0 n + n n
 Param: flagExit 0 n + n n	0
 Param: idFirm 0 n + n n	1
 Param: marketShareEntry 0 n + n n	0
