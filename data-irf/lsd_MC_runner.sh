@@ -31,7 +31,7 @@ LSDCONF=
 PERIODS=
 MONTECARLO=600
 UNIT=$(nproc)
-LSD_EXEC="./lsdNW"
+LSD_EXEC="../lsdNW"
 
 ### collect information from options and arguments in command ###
 
